@@ -1,0 +1,23 @@
+/*
+
+#8B94A3 GRAY-BLUE
+#C9F2C7 TEA GREEN
+#2A324B GUNMETAL
+#0D3B66 DARK MIDNIGHT BLUE
+#2FBF71 MEDIUM SEA GREEN
+
+*/
+
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: red;
+}
+
+#forumTitle {
+	width: 100%;
+	height: 75px;
+	background-color: #8B94A3;
+}
