@@ -14,3 +14,16 @@ function initMap() {
         gestureHandling: 'none'
     });
 };
+
+
+$(document).ready(function() {
+  $('.plot').click(function() {
+    console.log('test')
+    $('#plotPopUp').css("display", "block");
+  });
+
+  $('.menuClose').click(function() {
+    $('#plotPopUp').css("display", "none");
+  });
+
+});

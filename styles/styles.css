@@ -64,4 +64,51 @@ li a:hover {
   width: 50%;
   height: 100%;
   background-color: green;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.plot {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  margin-left: 2px;
+}
+
+#plotPopUp {
+  width: 300px;
+  height: 300px;
+  position: fixed; /*it can be fixed too*/
+  left:0; right:0;
+  top:0; bottom:0;
+  margin: auto;
+  display: none;
+  background-color: yellow;
+}
+
+a.boxClose{
+    float:right;
+    margin-top:-40px;
+    margin-right:-60px;
+    cursor:pointer;
+    color: black;
+    border: 1px solid #AEAEAE;
+    border-radius: 50%;
+    background: white;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 30px;
+}
+
+a.boxClose:hover {
+  background-color: #97ca3d;
+  color: white;
+}
+
+.boxClose:before {
+    content: "×";
+
 }
