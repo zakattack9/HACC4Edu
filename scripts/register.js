@@ -4,7 +4,7 @@ let numberForms = $(".input25")
 let plotData = [
   {
     "totalAlgae" : "2385kg",
-    "removedAlgae" : "322kg",
+    "removedAlgae" : "1244kg",
     "totalWorkers" : "21",
     "plotManagement" : "Nyler Tichols"
   },
@@ -66,12 +66,12 @@ let plotData = [
 
 let randomPlot = Math.floor(Math.random() * plotData.length)
 
-let data = $(".relevantStat");
-
-data[0].innerText = "Estimated Amount of Algae : " + plotData[randomPlot].totalAlgae;
-data[1].innerText = "Amount of Algae Removed : " + plotData[randomPlot].removedAlgae;
-data[2].innerText = "# of Workers : " + plotData[randomPlot].totalWorkers;
-data[3].innerText = "Manager: " + plotData[randomPlot].plotManagement;
+// let data = $(".relevantStat");
+//
+// data[0].innerText = "Estimated Amount of Algae : " + plotData[randomPlot].totalAlgae;
+// data[1].innerText = "Amount of Algae Removed : " + plotData[randomPlot].removedAlgae;
+// data[2].innerText = "# of Workers : " + plotData[randomPlot].totalWorkers;
+// data[3].innerText = "Manager: " + plotData[randomPlot].plotManagement;
 
 let inputArr = $("#registerPlot input");
 let formInfo = [];

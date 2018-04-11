@@ -15,35 +15,19 @@ function initMap() {
     });
 };
 
-
 $(document).ready(function() {
   $('.plot').click(function() {
+    let algR = plotData[event.target.id].removedAlgae;
+    var remAlg = parseInt(algR.slice(0, 4))
+    let algT = plotData[event.target.id].totalAlgae;
+    var totAlg = parseInt(algT.slice(0, 4))
+    $("#infoHeader").text("WELCOME TO PLOT ALG" + event.target.id);
+    $("#secondaryHeader").text("ALG" + event.target.id);
+    $("#ownerText").text("OWNED BY " + plotData[event.target.id].plotManagement);
+    $("#amtRegistered").text(plotData[event.target.id].totalWorkers);
+    document.getElementById("progressVal").value = ((remAlg / totAlg) * 100);
     $('#plotPopUp').css("display", "block");
     $('#plotContainer').css("filter", "blur(5px)");
-  });
-
-  $("#alg1").click(function() {
-    $("#plotPopUp").find("#infoHeader").text('WELCOME TO PLOT ALG1');
-    $("#plotPopUp").find("#secondaryHeader").text('ALG1');
-    $("#infoImage").attr("src","images/alg1.jpg");
-    $("#plotPopUp").find("#ownerText").text('OWNED BY NYLER TICHOLS');
-    $("#plotPopUp").find("#amtRegistered").text('62 PEOPLE ARE CURRENTLY REGISTERED');
-  });
-
-  $("#alg2").click(function() {
-    $("#plotPopUp").find("#infoHeader").text('WELCOME TO PLOT ALG2');
-    $("#plotPopUp").find("#secondaryHeader").text('ALG2');
-    $("#infoImage").attr("src","images/alg2.jpg");
-    $("#plotPopUp").find("#ownerText").text('OWNED BY TYLAN DUCKER');
-    $("#plotPopUp").find("#amtRegistered").text('23 PEOPLE ARE CURRENTLY REGISTERED');
-  });
-
-  $("#alg3").click(function() {
-    $("#plotPopUp").find("#infoHeader").text('WELCOME TO PLOT ALG3');
-    $("#plotPopUp").find("#secondaryHeader").text('ALG3');
-    $("#infoImage").attr("src","images/alg3.jpg");
-    $("#plotPopUp").find("#ownerText").text('OWNED BY CARREN JALIZO');
-    $("#plotPopUp").find("#amtRegistered").text('94 PEOPLE ARE CURRENTLY REGISTERED');
   });
 
   $('#creditsButton').click(function() {
