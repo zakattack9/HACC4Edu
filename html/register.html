@@ -8,10 +8,9 @@
     <title>Defenders of the Bay</title>
   </head>
   <body>
-    <div id="container">
+    <div id="volunteerContainer">
       <center><div>Plot X</div></center>
       <div id="registerPlot">
-
         <form class="inputField" action="index.html" method="submit">
           <p class="input25">First Name:</p>
           <input class="input75" type="text" required>
@@ -25,18 +24,29 @@
           <input class="input25" type="text" maxlength="4">
           <p class="input25">Organizations:</p>
           <input class="input75" type="text">
-
         </form>
         <center>
-          <button onclick="finishForm()"></button>
+          <button onclick="finishForm()">Submit</button>
         </center>
-
       </div>
       <div id="plotStatistics">
-        <p class="relevantStat">Estimated Amount of Algae : 1435kg</p>
-        <p class="relevantStat">Amount of Algae Removed : 500kg</p>
-        <p class="relevantStat"># of Workers : 50</p>
+        <div class="relevantStat"></div>
+        <div class="relevantStat"></div>
+        <div class="relevantStat"></div>
+        <div class="relevantStat"></div>
       </div>
+    </div>
+    <div id="submitInfo">
+      <center><div>Work Form</div></center>
+      <form class="inputField" action="index.html" method="submit">
+        <p class="input25">Bags Filled</p>
+        <input class="input75" type="number" required>
+        <p class="input25">Hours Worked</p>
+        <input class="input75" type="number" required>
+      </form>
+      <center>
+        <button onclick="">Submit</button>
+      </center>
     </div>
   </body>
   <script  src="../scripts/register.js"></script>
