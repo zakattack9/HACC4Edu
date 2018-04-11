@@ -25,6 +25,7 @@ $(document).ready(function() {
   $("#alg1").click(function() {
     $("#plotPopUp").find("#infoHeader").text('WELCOME TO PLOT ALG1');
     $("#plotPopUp").find("#secondaryHeader").text('ALG1');
+    $("#infoImage").attr("src","images/alg1.jpg");
     $("#plotPopUp").find("#ownerText").text('OWNED BY NYLER TICHOLS');
     $("#plotPopUp").find("#amtRegistered").text('62 PEOPLE ARE CURRENTLY REGISTERED');
   });
