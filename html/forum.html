@@ -4,10 +4,68 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="../styles/forumStyles.css">
-
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 <body>
+
+	<div id="creditsPopUp" class="animated slideInRight">
+			<div class="cardContainer">
+					<aside class="profile-card">
+							<!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+							<header>
+									<img src="../images/Mark.jpg">
+									</a>
+									<h1>MARK DEMESILLO</h1>
+									<h2>Tall Guy</h2>
+							</header>
+							<div class="profile-bio">
+									<p>Pretty much did most of the functions</p>
+							</div>
+					</aside>
+					<aside class="profile-card">
+							<!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+							<header>
+									<img src="../images/Kyle.jpg">
+									</a>
+									<h1>KYLE LINGAT</h1>
+									<h2>JavaScript Deficient</h2>
+							</header>
+							<div class="profile-bio">
+									<p>CSS Guy that kept on breaking the app</p>
+							</div>
+					</aside>
+					<aside class="profile-card">
+							<!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+							<header>
+									<img src="../images/Zak.jpg">
+									</a>
+									<h1>ZAK SAKATA</h1>
+									<h2>Project Manager</h2>
+							</header>
+							<div class="profile-bio">
+									<p>Worked on everything</p>
+							</div>
+					</aside>
+					<aside class="profile-card">
+							<!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+							<header>
+									<img src="../images/Dylan.jpg">
+									</a>
+									<h1>DYLAN TUCKER</h1>
+									<h2>At Track Meet</h2>
+							</header>
+							<div class="profile-bio">
+									<p>The API Wizard</p>
+							</div>
+					</aside>
+			</div>
+			<a class="boxClose menuClose"></a>
+
+			<div id="plotPopUp">
+			</div>
+	</div>
+
 	<div id="forumTitle">
 		DEFENDERS OF THE BAY FORUM
 		<img id="addIcon" src="../images/addIcon.png">
@@ -16,10 +74,10 @@
 
 	<div id="sideNav">
 		<div id="closeNav"><span id="closeNavInner">&times;<span></div>
-		<a href="../index.html"><div class="navItem" style="margin-top: 70px;">STATISTICS</div></a>
+		<a href="../index.html"><div class="navItem" style="margin-top: 70px;">HOME</div></a>
 		<div class="navItem" style="background-color: white">FORUM</div>
 		<a href="./map.html"><div class="navItem">MAP</div></a>
-		<a href="./register.html"><div class="navItem">REGISTER</div></a>
+		<a><div id="creditsButton" class="navItem">CREDITS</div></a>
 	</div>
 
 	<div id="addThreadPop">
@@ -37,7 +95,7 @@
 			<div id="formDescription">
 				Short Description on Thread:
 				<br>
-				<textarea type="text" placeholder="Ex. Looking for volunteers to help clean Plot A1"></textarea> 
+				<textarea type="text" placeholder="Ex. Looking for volunteers to help clean Plot A1"></textarea>
 			</div>
 
 			<br>
@@ -65,7 +123,7 @@
 				<span id="popTitle"></span>
 
 				<div id="popDesc">
-					
+
 				</div>
 
 				<div id="comContWrap">
@@ -79,7 +137,7 @@
 
 					<div id="commentsWrap">
 						<div class="comments">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab minus placeat nesciunt quaerat consectetur a nam doloribus, necessitatibus ducimus modi ea molestiae, repudiandae quasi blanditiis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur unde quidem et ducimus, quia excepturi officiisLorem ipsum dolor sit amet, consectetur adipisicing elit.
+							Algae is an informal term for a large, diverse group of photosynthetic organisms that are not necessarily closely related, and is thus polyphyletic. So basically, anything that is remotely plant-like and lives in the ocean is algae.
 						</div>
 						<div class="comBtmInf">
 							1 minute ago
@@ -87,7 +145,7 @@
 						<hr>
 
 						<div class="comments">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab minus placeat nesciunt quaerat consectetur a nam doloribus, necessitatibus ducimus modi ea molestiae, 
+							I am a cleanup organizer and I want to bring some volunteers to your plot!
 						</div>
 						<div class="comBtmInf">
 							3 minute ago
@@ -95,7 +153,7 @@
 						<hr>
 
 						<div class="comments">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab minus placeat nesciunt quaerat consectetur a nam doloribus, necessitatibus ducimus modi ea molestiae, repudiandae quasi blanditiis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur unde quidem et ducimus, quia excepturi officiisLorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab minus placeat nesciunt quaerat consectetur a nam doloribus, necessitatibus ducimus modi ea molestiae, repudiandae quasi blanditiis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur unde quidem et ducimus, quia excepturi officiisLorem ipsum dolor sit amet, consectetur adipisicing elit.
+							There was a really wierd phenomenon that occured at my plot the other day. The water was way more murky than usual and there was more algae.
 						</div>
 						<div class="comBtmInf">
 							5 hours ago
@@ -120,7 +178,7 @@
 					</div>
 				</div>
 			</div>
-		
+
 		</div>
 
 		<div id="threadWrap">
@@ -131,7 +189,7 @@
 		 			</div>
 
 		 			<div class="threadDesc">
-		 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab minus placeat nesciunt quaerat consectetur a nam doloribus, necessitatibus ducimus modi ea molestiae, repudiandae quasi blanditiis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur unde quidem et ducimus, quia excepturi officiisLorem ipsum dolor sit amet, consectetur adipisicing elit. Ab minus placeat nesciunt quaerat consectetur a nam doloribus, necessitatibus ducimus modi ea molestiae, repudiandae quasi blanditiis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur unde quidem et ducimus, quia excepturi officiis
+		 				I've been having trouble removing enough algae from my plot because it has a particularly heavy flow of nutrients from the storm drain. Currently I have removed about 10 bags of algae every month, but every time I come back it seems to just be heavier. I'm just looking for a few volunteers to help me clean up this weekend. Leave a reply if you are interested!
 		 			</div>
 				</div>
 
@@ -155,7 +213,7 @@
 		 			</div>
 
 		 			<div class="threadDesc">
-		 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab minus placeat nesciunt quaerat consectetur a nam doloribus, necess
+		 				This post is mostly for discussing and brainstorming new ways to remove algae. Any new ideas are welcome and feel free to comment your thoughts!
 		 			</div>
 				</div>
 
@@ -167,7 +225,7 @@
 
 	 			<div class="bottomOpt">
 	 				<span class="dateCreated">
-	 					3 hours ago
+	 					3 days ago
 	 				</span>
 	 			</div>
 	 		</div>
@@ -175,7 +233,7 @@
 	 		<div class="thread">
 	 			<div class="threadInfo">
 		 			<div class="threadTitle">
-						Requesting Help for Plot A1
+						!!! Malama Maunaluna Event !!!
 		 			</div>
 
 		 			<div class="threadDesc">
@@ -191,7 +249,7 @@
 
 	 			<div class="bottomOpt">
 	 				<span class="dateCreated">
-	 					3 hours ago
+	 					3 weeks ago
 	 				</span>
 	 			</div>
 	 		</div>
@@ -199,11 +257,11 @@
 			<div class="thread">
 	 			<div class="threadInfo">
 		 			<div class="threadTitle">
-		 				Most Efficient Way to Clean Plots
+		 				FAQs
 		 			</div>
 
 		 			<div class="threadDesc">
-		 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab minus placeat nesciunt quaerat consectetur a nam doloribus, necess
+		 				The FAQs section basically just contains pinned posts and comments for frequent or good questions.
 		 			</div>
 				</div>
 
@@ -215,7 +273,7 @@
 
 	 			<div class="bottomOpt">
 	 				<span class="dateCreated">
-	 					3 hours ago
+	 					3 months ago
 	 				</span>
 	 			</div>
 	 		</div>
@@ -223,11 +281,11 @@
 	 		<div class="thread">
 	 			<div class="threadInfo">
 		 			<div class="threadTitle">
-						Requesting Help for Plot A1
+						Abnormalities
 		 			</div>
 
 		 			<div class="threadDesc">
-		 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab minus placeat nesciunt quaerat consectetur a nam doloribus, necessitatibus ducimus modi ea molestiae, repudiandae quasi blanditiis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur unde quidem et ducimus, quia excepturi officiisLorem ipsum dolor sit amet, consectetur adipisicing elit. Ab minus placeat nesciunt quaerat consectetur a nam doloribus, necessitatibus ducimus modi ea molestiae, repudiandae quasi blanditiis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur unde quidem et ducimus, quia excepturi officiis
+		 				This posting is for directly contacting the organization to inform them of any equipment malfunctions and any other abnormalities in the plot conditions.
 		 			</div>
 				</div>
 
@@ -273,12 +331,17 @@
 
 	<div id="sideBar">
 		<div id="sideBlock">
-			<span style="font-weight:bold">Reminders:</span>
+			<span style="font-weight:bold">REMINDERS: </span>
 			Don't forget to rope off your plot before starting any cleanup.
 		</div>
 
 		<div id="calendarTitle">Low-Tide Times:</div>
 		<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=07l1r45mb3ipltclo8qc7ki0jg%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=Pacific%2FHonolulu" style="border-width:0" width="90%" height="300px" frameborder="0" scrolling="no"></iframe>
+
+		<div id="sideBlock">
+			<span style="font-weight:bold">MASS EVENT: </span>
+			There will be a mass cleanup on April 28th at plot 10. Our goal is to hit a total of 300 pounds of algae cleaned that day
+		</div>
 
 	</div>
 
