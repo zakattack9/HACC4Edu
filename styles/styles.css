@@ -194,6 +194,10 @@ progress[value]::-webkit-progress-bar {
   height: 100%;
 }
 
+#infoImage {
+  width: 100%;
+}
+
 .infoBox {
   border-style: solid;
   border-width: 1px;
