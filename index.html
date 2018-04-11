@@ -2,154 +2,190 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <script src="scripts/app.js" type="text/javascript"></script>
-    <script src="scripts/register.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <meta charset="utf-8">
-    <title>Defenders of the Bay</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="./styles/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<script src="scripts/app.js" type="text/javascript"></script>
+		<script src="scripts/register.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<meta charset="utf-8">
+		<title>Defenders of the Bay</title>
 </head>
 
 <body>
 
-    <div id="container">
-        <ul>
-            <h1>DEFENDERS OF THE BAY</h1>
-            <li><a class="active" href="#home">HOME</a></li>
-            <li><a href="html/forum.html">FORUM</a></li>
-            <li><a href="html/map.html">MAP</a></li>
-            <li id="creditsButton"><a>CREDITS</a></li>
-        </ul>
+		<div id="container">
+				<ul>
+						<h1>DEFENDERS OF THE BAY</h1>
+						<li><a class="active" href="#home">HOME</a></li>
+						<li><a href="html/forum.html">FORUM</a></li>
+						<li><a href="html/map.html">MAP</a></li>
+						<li id="creditsButton"><a>CREDITS</a></li>
+				</ul>
+		</div>
 
-    <div id="midContainer">
-      <h1>PLOTS</h1>
-      <div id="plotContainer">
-        <div id="masonry">
-            <div class="imgContainer">
-                <img id="0" class="plot" src="images/beach.jpg">
-                <div class="centered">ALG1</div>
-            </div>
-            <div class="imgContainer">
-                <img id="1" class="plot" src="images/beach2.jpg">
-                <div class="centered">ALG2</div>
-            </div>
-            <div class="imgContainer">
-                <img id="2"class="plot" src="images/beach3.jpg">
-                <div class="centered">ALG3</div>
-            </div>
-            <div class="imgContainer">
-                <img id="3" class="plot" src="images/beach4.jpg">
-                <div class="centered">ALG4</div>
-            </div>
-            <div class="imgContainer">
-                <img id="4" class="plot" src="images/beach7.jpg">
-                <div class="centered">ALG5</div>
-            </div>
-            <div class="imgContainer">
-                <img id="5" class="plot" src="images/beach5.jpeg">
-                <div class="centered">ALG6</div>
-            </div>
-            <div class="imgContainer">
-                <img id="6" class="plot" src="images/beach6.jpeg">
-                <div class="centered">ALG7</div>
-            </div>
-            <div class="imgContainer">
-                <img id="7" class="plot" src="images/beach8.jpg">
-                <div class="centered">ALG8</div>
-            </div>
-            <div class="imgContainer">
-                <img id="8" class="plot" src="images/beach11.jpg">
-                <div class="centered">ALG9</div>
-            </div>
-            <div class="imgContainer">
-                <img id="9" class="plot" src="images/beach10.jpg">
-                <div class="centered">ALG10</div>
-            </div>
-        </div>
-    </div>
-      <div id="plotPopUp">
-        <h1 id="infoHeader"></h1>
-        <div id="infoImage"></div>
-        <div id="infoContainer">
-          <div id="text">
-            <h2 id="ownerText"></h2>
-            <h3 id="amtRegistered"></h3>
-            <div class="progressBar"><progress id="progressVal" value="" max="100"></progress></div>
-            <h3 id="progressPercentage"></h3>
-          </div>
-        </div>
-        <a class="boxClose menuClose"></a>
-      </div>
+		<div id="midContainer">
+			<h1>PLOTS</h1>
+			<div id="plotContainer">
+				<div class="plotItem" style="background-image: url('../images/bay1.png')">
+					<div class="plotText">
+						<div class="plotTitle">PLOT 1</div>
+					</div>
+				</div>
 
-            <div id="creditsPopUp">
-                <div class="cardContainer">
-                    <aside class="profile-card">
-                        <!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
-                        <header>
-                            <img src="images/Mark.jpg">
-                            </a>
-                            <h1>MARK DEMESILLO</h1>
-                            <h2>Tall Guy</h2>
-                        </header>
-                        <div class="profile-bio">
-                            <p>Hello there!</p>
-                        </div>
-                    </aside>
-                    <aside class="profile-card">
-                        <!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
-                        <header>
-                            <img src="images/Kyle.jpg">
-                            </a>
-                            <h1>KYLE LINGAT</h1>
-                            <h2>JavaScript Deficient</h2>
-                        </header>
-                        <div class="profile-bio">
-                            <p>Hello there!</p>
-                        </div>
-                    </aside>
-                    <aside class="profile-card">
-                        <!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
-                        <header>
-                            <img src="images/Zak.jpg">
-                            </a>
-                            <h1>ZAK SAKATA</h1>
-                            <h2>At Track Meet</h2>
-                        </header>
-                        <div class="profile-bio">
-                            <p>Hello there!</p>
-                        </div>
-                    </aside>
-                    <aside class="profile-card">
-                        <!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
-                        <header>
-                            <img src="images/Dylan.jpg">
-                            </a>
-                            <h1>DYLAN TUCKER</h1>
-                            <h2>At Track Meet</h2>
-                        </header>
-                        <div class="profile-bio">
-                            <p>Hello there!</p>
-                        </div>
-                    </aside>
-                </div>
-                <a class="boxClose menuClose"></a>
-            </div>
-        </div>
+				<div class="plotItem" style="background-image: url('../images/bay2.png')">
+					<div class="plotText">
+						<div class="plotTitle">PLOT 2</div>
+					</div>
+				</div>
 
-        <div id="rightBar">
-            <h1>OVERALL STATISTICS</h1>
-            <div id="statContainer">
-              <h3>3.8 MILLION out of 5 MILLION ALGAE CLEARED</h3>
-              <div class="progressBar"><progress id="progressVal" value="" max="100"></progress></div>
-            </div>
-            <h3>4 out of 10 PLOTS are REGISTERED</h3>
-              <h3>82% of ALGAE IS DIATOM</h3>
-              <h3>18% of ALGAE IS WAKAME</h3>
-            </div>
-        </div>
-    </div>
+				<div class="plotItem" style="background-image: url('../images/bay3.png')">
+					<div class="plotText">
+						<div class="plotTitle">PLOT 3</div>
+					</div>
+				</div>
+
+				<div class="plotItem" style="background-image: url('../images/bay4.png')">
+					<div class="plotText">
+						<div class="plotTitle">PLOT 4</div>
+					</div>
+				</div>
+
+				<div class="plotItem" style="background-image: url('../images/bay5.png')">
+					<div class="plotText">
+						<div class="plotTitle">PLOT 5</div>
+					</div>
+				</div>
+
+				<div class="plotItem" style="background-image: url('../images/bay6.png')">
+					<div class="plotText">
+						<div class="plotTitle">PLOT 6</div>
+					</div>
+				</div>
+				<!-- <div id="masonry">
+						<div class="imgContainer">
+								<img id="0" class="plot" src="images/beach.jpg">
+								<div class="centered">ALG1</div>
+						</div>
+						<div class="imgContainer">
+								<img id="1" class="plot" src="images/beach2.jpg">
+								<div class="centered">ALG2</div>
+						</div>
+						<div class="imgContainer">
+								<img id="2"class="plot" src="images/beach3.jpg">
+								<div class="centered">ALG3</div>
+						</div>
+						<div class="imgContainer">
+								<img id="3" class="plot" src="images/beach4.jpg">
+								<div class="centered">ALG4</div>
+						</div>
+						<div class="imgContainer">
+								<img id="4" class="plot" src="images/beach7.jpg">
+								<div class="centered">ALG5</div>
+						</div>
+						<div class="imgContainer">
+								<img id="5" class="plot" src="images/beach5.jpeg">
+								<div class="centered">ALG6</div>
+						</div>
+						<div class="imgContainer">
+								<img id="6" class="plot" src="images/beach6.jpeg">
+								<div class="centered">ALG7</div>
+						</div>
+						<div class="imgContainer">
+								<img id="7" class="plot" src="images/beach8.jpg">
+								<div class="centered">ALG8</div>
+						</div>
+						<div class="imgContainer">
+								<img id="8" class="plot" src="images/beach11.jpg">
+								<div class="centered">ALG9</div>
+						</div>
+						<div class="imgContainer">
+								<img id="9" class="plot" src="images/beach10.jpg">
+								<div class="centered">ALG10</div>
+						</div> -->
+			</div>
+		</div>
+			<div id="plotPopUp">
+				<h1 id="infoHeader"></h1>
+				<div id="infoImage"></div>
+				<div id="infoContainer">
+					<div id="text">
+						<h2 id="ownerText"></h2>
+						<h3 id="amtRegistered"></h3>
+						<div class="progressBar"><progress id="progressVal" value="" max="100"></progress></div>
+						<h3 id="progressPercentage"></h3>
+					</div>
+				</div>
+				<a class="boxClose menuClose"></a>
+			</div>
+
+						<div id="creditsPopUp">
+								<div class="cardContainer">
+										<aside class="profile-card">
+												<!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+												<header>
+														<img src="images/Mark.jpg">
+														</a>
+														<h1>MARK DEMESILLO</h1>
+														<h2>Tall Guy</h2>
+												</header>
+												<div class="profile-bio">
+														<p>Hello there!</p>
+												</div>
+										</aside>
+										<aside class="profile-card">
+												<!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+												<header>
+														<img src="images/Kyle.jpg">
+														</a>
+														<h1>KYLE LINGAT</h1>
+														<h2>JavaScript Deficient</h2>
+												</header>
+												<div class="profile-bio">
+														<p>Hello there!</p>
+												</div>
+										</aside>
+										<aside class="profile-card">
+												<!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+												<header>
+														<img src="images/Zak.jpg">
+														</a>
+														<h1>ZAK SAKATA</h1>
+														<h2>At Track Meet</h2>
+												</header>
+												<div class="profile-bio">
+														<p>Hello there!</p>
+												</div>
+										</aside>
+										<aside class="profile-card">
+												<!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+												<header>
+														<img src="images/Dylan.jpg">
+														</a>
+														<h1>DYLAN TUCKER</h1>
+														<h2>At Track Meet</h2>
+												</header>
+												<div class="profile-bio">
+														<p>Hello there!</p>
+												</div>
+										</aside>
+								</div>
+								<a class="boxClose menuClose"></a>
+						</div>
+				</div>
+
+				<div id="rightBar">
+						<h1>OVERALL STATISTICS</h1>
+						<div id="statContainer">
+							<h3>3.8 MILLION out of 5 MILLION ALGAE CLEARED</h3>
+							<div class="progressBar"><progress id="progressVal" value="" max="100"></progress></div>
+						</div>
+						<h3>4 out of 10 PLOTS are REGISTERED</h3>
+							<h3>82% of ALGAE IS DIATOM</h3>
+							<h3>18% of ALGAE IS WAKAME</h3>
+						</div>
+				</div>
+		</div>
 
 </body>
 
