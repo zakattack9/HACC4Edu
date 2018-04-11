@@ -644,7 +644,8 @@ $(document).ready(function() {
     var remAlg = parseInt(algR.slice(0, 4))
     let algT = plotData[event.target.id].totalAlgae;
     var totAlg = parseInt(algT.slice(0, 4))
-    // document.getElementById('infoImage').src = event.target.src;
+    console.log(event.target.src)
+    document.getElementById('infoImage').src = event.target.src;
     $("#infoHeader").text("WELCOME TO PLOT ALG" + (parseInt(event.target.id) + 1));
     $("#ownerText").text("THIS PLOT IS OWNED BY " + plotData[event.target.id].plotManagement);
     $("#amtRegistered").text(plotData[event.target.id].totalWorkers + ' people are currently registered');
