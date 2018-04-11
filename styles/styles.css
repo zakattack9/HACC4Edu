@@ -25,11 +25,62 @@ h1, h2, h3 {
 
 
 
-#container {
+#sideNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: calc(100% - 70px);
+  width: 0px;
+  background-color: #2FBF71;
+  margin-top: 70px;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+#closeNav {
+  font-size: 40px;
+  margin-left: 20px;
+  transition: 0.2s;
+}
+
+#closeNav:hover #closeNavInner {
+  cursor: pointer;
+  display: block;
+  width: 50px;
+  transform: scale(1.08);
+  transition: 0.2s;
+}
+
+.navItem {
+  height: 65px;
+  letter-spacing: 2px;
+  line-height: 65px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.navItem:hover {
+  background-color: white;
+  transition: 0.2s;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/*#container {
   width: 100%;
   height: 110%;
   overflow: hidden;
+<<<<<<< HEAD
+  display: none;
+}*/
+=======
 }
+>>>>>>> 1a8a396c0efced62ec5a0c826bec2b7633072d77
 
 #map {
   height: 100vh;
@@ -133,7 +184,7 @@ li a:hover {
 #rightBar {
   height: 100%;
   float: left;
-  background-color: #2FBF71;
+  background-color: #C9F2C7;
   width: 30%;
 }
 
@@ -143,19 +194,42 @@ li a:hover {
   letter-spacing: 3px;
 }
 
+#midContainer h1 {
+  height: 70px;
+  line-height: 70px;
+  background-color: #8B94A3;
+  margin-top: 0;
+}
+
 #midContainer {
-  float: left;
+  float: right;
   width: 70%;
   height: 100%;
   background-color: #2A324B;
 }
 
+#overlayOpen {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  transition: 0.2s;
+}
+
+#overlayOpen img{
+  height: 30px;
+}
+
+#overlayOpen:hover{
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+/*
 #masonry {
   width: 99%;
   column-count: 3;
   column-gap: 0px;
   position: relative;
-}
+}*/
 
 .imgContainer {
   width: 95%;
@@ -261,18 +335,22 @@ h4:after{
 }
 
 /*styles for plot div*/
+#plotWrap {
+  height: calc(100% - 91px);
+  overflow-y: auto;
+}
+
 #plotContainer {
-  width: 100%;
+  width: 96%;
   column-count: 3;
   column-gap: 20px;
-  padding-bottom: 66px;
   margin: 0 auto;
-  padding-top: 1px;
 }
 
 .plotItem {
   width: 100%;
-  height: 300px;
+  height: 270px;
+  margin-bottom: 20px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   transition: 0.2s;
@@ -322,6 +400,7 @@ h4:after{
 }
 
 .plotTitle {
+ line-height: 270px;
   position: relative;
   z-index: 1;
 }
@@ -351,16 +430,18 @@ progress[value]::-webkit-progress-bar {
   width: 30%;
   height: 100%;
   position: absolute; /*it can be fixed too*/
-  left:0; right: 0;
+  left:0;
   top:0; bottom:0;
   margin: auto;
   display: none;
-  background-color: RGBA(201,242,199, 0.5);
+  background-color: RGBA(201,242,199, 1);
   border:2px solid #ccc;
   -moz-box-shadow: 0 1px 5px #333;
   -webkit-box-shadow: 0 1px 5px #333;
   max-height: 100%;
   overflow-y: scroll;
+  z-index: 3;
+  overflow-x: hidden;
 }
 
 #plotPopUp h1 {
