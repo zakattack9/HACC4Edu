@@ -519,7 +519,7 @@ $(document).ready(function() {
     totalRemoved = rAlg += parseInt(plotData[i].removedAlgae.slice(0, 4));
     valueBar = ((rAlg / gAlg) * 100);
   }
-  $("#statContainer h3")[0].innerText = "" + rAlg + "kgs out of " + gAlg + "kgs of algie have been removed!";
+  $("#statContainer h3")[0].innerText = "" + rAlg + "kgs out of " + gAlg + "kgs of algae have been removed!";
   $("#statContainer h3")[3].innerText = plotData.length + " plots in total have been launched and volunteered for!";
   $("#progressTot")[0].value = valueBar
 
