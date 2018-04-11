@@ -216,6 +216,7 @@ h4{
     line-height: 30px;
     text-align: center;
     display:none;
+    margin-bottom: 20px;
 }
 
 h4:after{
@@ -264,10 +265,8 @@ progress[value] {
   height: 20px;
 }
 
-progress {
-  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-transform: rotate(-90deg);
-}
+
+
 progress[value]::-webkit-progress-bar {
   background-color: white;
   border-radius: 2px;
