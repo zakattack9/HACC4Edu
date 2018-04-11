@@ -111,7 +111,7 @@ let finishWork = () => {
   if (check !== workInput.length) {
     alert("Please complete all required forms!");
   } else {
-    formInfo.push(
+    workInfo.push(
       {
         "filledBags" : "" + workInput[0].value,
         "hoursWorked" : "" + workInput[1].value
