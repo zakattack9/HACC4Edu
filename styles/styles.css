@@ -249,6 +249,7 @@ h4:after{
 }
 
 #plotPopUp img {
+  width: 100%;
   height: 80%;
 }
 
@@ -300,10 +301,6 @@ progress[value]::-webkit-progress-bar {
 
 #infoContainer {
   height: 100%;
-}
-
-#infoImage {
-  width: 100%;
 }
 
 .infoBox {
