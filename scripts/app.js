@@ -616,11 +616,12 @@ $(document).ready(function() {
     var remAlg = parseInt(algR.slice(0, 4))
     let algT = plotData[event.target.id].totalAlgae;
     var totAlg = parseInt(algT.slice(0, 4))
+    // document.getElementById('infoImage').src = event.target.src;
     $("#infoHeader").text("WELCOME TO PLOT ALG" + (parseInt(event.target.id) + 1));
-    $("#ownerText").text("OWNED BY " + plotData[event.target.id].plotManagement);
-    $("#amtRegistered").text(plotData[event.target.id].totalWorkers + ' people are registered');
+    $("#ownerText").text("THIS PLOT IS OWNED BY " + plotData[event.target.id].plotManagement);
+    $("#amtRegistered").text(plotData[event.target.id].totalWorkers + ' people are currently registered');
     document.getElementById("progressVal").value = ((remAlg / totAlg) * 100);
-    $('#progressPercentage').text(Math.round(document.getElementById("progressVal").value) + '% done!')
+    $('#progressPercentage').text('This plot is ' + Math.round(document.getElementById("progressVal").value) + '% complete!')
     $('#plotPopUp').css("display", "block");
     $('#plotContainer').css("filter", "blur(5px)");
   });

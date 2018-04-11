@@ -170,9 +170,23 @@ position: relative;
   max-height: 20px;
 	padding-left: 5px;
 	margin: 1px 1px;
+  position: relative;
 	border-radius: 10px;
 }
 
+.centered {
+  position: absolute;
+  top: 300%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Raleway';
+  color: white;
+  font-size: 70px;
+}
+
+.imgContainer:hover .centered{
+  display: none;
+}
 .plot {
   cursor: pointer;
   /* margin: auto; */
@@ -182,6 +196,7 @@ position: relative;
   width: 100%;
   height: 100%;
   max-height: 200px;
+  position: relative;
 }
 
 .plot:hover {
@@ -202,7 +217,7 @@ position: relative;
   border-bottom: 1px solid black;
 }
 
-h4{
+/* h4{
     background: #2FBF71;
     color: white;
     font-size: 13px;
@@ -212,7 +227,7 @@ h4{
     text-align: center;
     display:none;
     margin-bottom: 20px;
-}
+} */
 
 h4:after{
     content:'';
@@ -227,6 +242,7 @@ h4:after{
     -webkit-transform:rotate(45deg);
     transform:rotate(45deg);
 }
+
 
 /* .imgContainer:hover h4{
     display:block;
@@ -272,7 +288,7 @@ progress[value]::-webkit-progress-bar {
 }
 
 #creditsPopUp {
-  width: 60%;
+  width: 30%;
   height: 100%;
   position: absolute; /*it can be fixed too*/
   left:0; right: 0;
