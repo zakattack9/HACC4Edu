@@ -1,0 +1,38 @@
+#volunteerContainer, #submitInfo {
+  display: block;
+  border: black 2px solid;
+  border-radius: 10px;
+  box-sizing: border-box;
+  height: 75%;
+  width: 40%;
+  padding: 20px;
+  background-color: #C9F2C7;
+  margin-left: 30%;
+  margin-top: 4%;
+}
+
+input {
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.input25 {
+  width: 25%;
+}
+
+.input75 {
+  width: 75%;
+}
+
+button {
+  border-radius: 10px;
+  width: 40%;
+  height: 100%;
+  margin: 15px;
+}
+
+input[type="number"] ::-webkit-inner-spin-button,
+input[type="number"] ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

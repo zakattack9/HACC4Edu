@@ -12,11 +12,19 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+
+h1, h2 {
+  font-family: 'Raleway';
+  user-select: none;
+  letter-spacing: 5px;
 }
 
 #container {
   width: 100%;
-  height: 100%;
+  height: 165%;
 }
 
 #map {
@@ -27,41 +35,191 @@ body, html {
 
 ul {
     list-style-type: none;
-    width: 20%;
+    width: 15%;
     height: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #2FBF71;
     float: left;
+    text-align: center;
+}
+
+ul h1{
+  color: white;
+  font-size: 22px;
 }
 
 li a {
     display: block;
-    color: white;
+    color: #2A324B;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: 'Raleway';
+    letter-spacing: 7px;
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: white;
+    animation: pulse 1s infinite;
+    cursor: pointer;
 }
 
+.active {
+  background-color: white;
+}
 #rightBar {
   height: 100%;
   float: left;
-  background-color: red;
+  background-color: #2FBF71;
   width: 30%;
 }
 
-#rightBar h1 {
+#rightBar h1, #midContainer h1 {
   text-align: center;
+  color: white;
+  letter-spacing: 3px;
 }
 
 #midContainer {
   float: left;
+  width: 55%;
+  height: 100%;
+  background-color: #2A324B;
+}
+
+#plotContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vw;
+  max-height: 900px;
+  font-size: 0;
+  padding-right: 1px;
+}
+
+div#plotContainer img {
+  width: 32.8%;
+  transition: .8s opacity;
+  margin: 2px;
+}
+
+
+
+.plot {
+  cursor: pointer;
+  /* margin: auto; */
+  margin-top: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.plot:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    animation: pulse infinite 1s;
+}
+
+.cardContainer {
+    padding: 2px 16px;
+    color: black;
+}
+
+
+#plotPopUp {
   width: 50%;
   height: 100%;
-  background-color: green;
+  position: absolute; /*it can be fixed too*/
+  left:0; right:200px;
+  top:0; bottom:0;
+  margin: auto;
+  display: none;
+  background-color: RGBA(201,242,199, 0.95);
+  border:2px solid #ccc;
+  -moz-box-shadow: 0 1px 5px #333;
+  -webkit-box-shadow: 0 1px 5px #333;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+#plotPopUp img {
+  height: 80%;
+}
+
+#creditsPopUp {
+  width: 50%;
+  height: 100%;
+  position: absolute; /*it can be fixed too*/
+  left:0; right:200px;
+  top:0; bottom:0;
+  margin: auto;
+  display: none;
+  background-color: RGBA(201,242,199, 0.95);
+  border:2px solid #ccc;
+  -moz-box-shadow: 0 1px 5px #333;
+  -webkit-box-shadow: 0 1px 5px #333;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+#plotPopUp h1 {
+  color: black;
+  letter-spacing: 6px;
+}
+
+#infoContainer {
+  height: 100%;
+}
+
+.infoBox {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  width: 46%;
+  height: 100px;
+  margin: auto;
+  transition: 0.3s;
+  margin-top: 2px;
+}
+
+a.boxClose{
+  position: absolute;
+  top: 0;
+  right: 0;
+    float:right;
+    cursor:pointer;
+    color: black;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 30px;
+}
+
+a.boxClose:hover {
+  color: white;
+}
+
+.boxClose:before {
+    content: "×";
+}
+
+#statContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.statBox {
+  background-color: white;
+  width: 45%;
+  height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.statBox:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  padding: 3px;
 }
