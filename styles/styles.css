@@ -16,7 +16,7 @@ body, html {
   overflow: auto;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Raleway';
   user-select: none;
   letter-spacing: 5px;
@@ -135,7 +135,6 @@ div#plotContainer img {
   margin: auto;
   display: none;
   background-color: RGBA(201,242,199, 0.95);
-  border:2px solid #ccc;
   -moz-box-shadow: 0 1px 5px #333;
   -webkit-box-shadow: 0 1px 5px #333;
   max-height: 100%;
@@ -144,6 +143,25 @@ div#plotContainer img {
 
 #plotPopUp img {
   height: 80%;
+}
+
+
+progress[value] {
+  -webkit-appearance: none;
+   appearance: none;
+
+  width: 250px;
+  height: 20px;
+}
+
+progress {
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+transform: rotate(-90deg);
+}
+progress[value]::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
 #creditsPopUp {
@@ -167,8 +185,17 @@ div#plotContainer img {
   letter-spacing: 6px;
 }
 
+#plotPopUp h2,h3 {
+  font-weight: lighter;
+  text-align: center;
+}
+
 #infoContainer {
   height: 100%;
+}
+
+#infoImage {
+  width: 100%;
 }
 
 .infoBox {
