@@ -237,9 +237,9 @@ function initMap() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Plot A1</h1>'+
         '<div id="bodyContent">'+
-        '<p><b>Plot A1</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+        '<p><b>Plot A1</b> is currently managed by <b>Tatteus Greene</b>, and is one of the largest plots in the bay. ' +
         'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-        '<p>REGISTER HERE: <a href="register.html">Plot A1</a> '+
+        '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A1</a> '+
         '</div>';
 
   var infowindow1 = new google.maps.InfoWindow({
@@ -252,7 +252,7 @@ function initMap() {
     '<div id="bodyContent">'+
     '<p><b>Plot A2</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-    '<p>REGISTER HERE: <a href="register.html">Plot A2</a> '+
+    '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A2</a> '+
     '</div>';
 
     var infowindow2 = new google.maps.InfoWindow({
@@ -265,7 +265,7 @@ function initMap() {
       '<div id="bodyContent">'+
       '<p><b>Plot A3</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
       'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-      '<p>REGISTER HERE: <a href="register.html">Plot A3</a> '+
+      '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A3</a> '+
       '</div>';
 
   var infowindow3 = new google.maps.InfoWindow({
@@ -278,7 +278,7 @@ function initMap() {
     '<div id="bodyContent">'+
     '<p><b>Plot A4</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-    '<p>REGISTER HERE: <a href="register.html">Plot A4</a> '+
+    '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A4</a> '+
     '</div>';
   var infowindow4 = new google.maps.InfoWindow({
     content: contentString4
@@ -290,7 +290,7 @@ function initMap() {
     '<div id="bodyContent">'+
     '<p><b>Plot A5</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-    '<p>Work Log: <a href="log.html">Plot A5</a> '+
+    '<p>Work Log: <a href="log.html" class="registerLink">Plot A5</a> '+
     '</div>';
 
     var infowindow5 = new google.maps.InfoWindow({
@@ -303,7 +303,7 @@ function initMap() {
       '<div id="bodyContent">'+
       '<p><b>Plot A6</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
       'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-      '<p>REGISTER HERE: <a href="register.html">Plot A6</a> '+
+      '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A6</a> '+
       '</div>';
 
   var infowindow6 = new google.maps.InfoWindow({
@@ -316,7 +316,7 @@ function initMap() {
     '<div id="bodyContent">'+
     '<p><b>Plot A7</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-    '<p>Work Log: <a href="log.html">Plot A7</a> '+
+    '<p>Work Log: <a href="log.html" class="registerLink">Plot A7</a> '+
     '</div>';
 
   var infowindow7 = new google.maps.InfoWindow({
@@ -329,7 +329,7 @@ function initMap() {
     '<div id="bodyContent">'+
     '<p><b>Plot A8</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-    '<p>Work Log: <a href="log.html">Plot A8</a> '+
+    '<p>Work Log: <a href="log.html" class="registerLink">Plot A8</a> '+
     '</div>';
 
   var infowindow8 = new google.maps.InfoWindow({
@@ -342,7 +342,7 @@ function initMap() {
     '<div id="bodyContent">'+
     '<p><b>Plot A9</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-    '<p>REGISTER HERE: <a href="register.html">Plot A9</a> '+
+    '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A9</a> </p>'+
     '</div>';
   var infowindow9 = new google.maps.InfoWindow({
     content: contentString9
@@ -354,7 +354,7 @@ function initMap() {
     '<div id="bodyContent">'+
     '<p><b>Plot A10</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-    '<p>REGISTER HERE: <a href="register.html">Plot A10</a> '+
+    '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A10</a> '+
     '</div>';
 
   var infowindow10 = new google.maps.InfoWindow({

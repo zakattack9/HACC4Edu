@@ -454,3 +454,14 @@ a.boxClose:hover {
 .boxClose:before {
     content: "×";
 }
+
+.registerLink {
+  color: green;
+}
+
+.registerLink:hover {
+  text-decoration: underline;
+}
+
+
+
