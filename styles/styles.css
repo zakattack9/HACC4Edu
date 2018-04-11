@@ -101,26 +101,16 @@ li a:hover {
   width: 99%;
 column-count: 3;
 column-gap: 0px;
-padding-bottom: 66px;
-margin: 0 auto;
-padding-top: 1px;
 }
 
 #imgContainer {
   width: 95%;
-	/*display: flex;
-	flex-direction: row;
-	justify-content: space-between;*/
 	display: inline-block;
   max-height: 20px;
 	padding-left: 5px;
-	padding-right: 5px;
 	margin: 1px 1px;
 	border-radius: 10px;
-
 }
-
-
 
 .plot {
   cursor: pointer;
