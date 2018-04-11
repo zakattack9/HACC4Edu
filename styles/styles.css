@@ -363,11 +363,13 @@ h4:after{
   margin-right: 5px;
   margin-left: auto;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 #closePop:hover {
   transform: scale(1.1);
   transition: 0.2s;
+  cursor: pointer;
 }
 
 #plotPopTitle {
