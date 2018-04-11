@@ -14,7 +14,35 @@
 	</div>
 
 	<div id="addThreadPop">
-		
+		<div id="threadForm">
+			<div id="createFormTitle">Create a Thread:</div>
+
+			<br>
+			<div id="formTitle">
+				Thread Name:
+				<br>
+				<input type="text" placeholder="Ex. Need Help For Plot A1">
+			</div>
+
+			<br>
+			<div id="formDescription">
+				Short Description on Thread:
+				<br>
+				<textarea type="text" placeholder="Ex. Looking for volunteers to help clean Plot A1"></textarea> 
+			</div>
+
+			<br>
+			<div id="formTags">
+				Tags:
+				<br>
+				<input type="text" placeholder="Ex. Request, Plots, Volunteers">
+			</div>
+
+			<div id="createThread">
+				Create
+			</div>
+
+		</div>
 	</div>
 
  	<div id="container">
@@ -24,7 +52,7 @@
 				<span id="closeThreadPopInner">&times;</span>
 			</div>
 
-			<div id="threadWrap">
+			<div id="threadWrapPop">
 				<span id="popTitle"></span>
 
 				<div id="popDesc">
@@ -210,7 +238,7 @@
 	 		<div class="thread">
 	 			<div class="threadInfo">
 		 			<div class="threadTitle">
-						Requesting Help for Plot A1
+						Requesting Help for Plot A1123
 		 			</div>
 
 		 			<div class="threadDesc">
@@ -235,8 +263,14 @@
  	</div>
 
 	<div id="sideBar">
-		Reminders:
-		Don't forget to rope off plot before starting. calendar low tide
+		<div id="sideBlock">
+			<span style="font-weight:bold">Reminders:</span>
+			Don't forget to rope off your plot before starting any cleanup.
+		</div>
+
+		<div id="calendarTitle">Low-Tide Times:</div>
+		<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=07l1r45mb3ipltclo8qc7ki0jg%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=Pacific%2FHonolulu" style="border-width:0" width="90%" height="300px" frameborder="0" scrolling="no"></iframe>
+
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
