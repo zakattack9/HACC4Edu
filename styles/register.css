@@ -1,0 +1,53 @@
+#volunteerContainer, #submitInfo {
+  display: block;
+  border-radius: 10px;
+  box-sizing: border-box;
+  height: 75%;
+  width: 40%;
+  padding: 20px;
+  background-color: #C9F2C7;
+  margin-left: 30%;
+  margin-top: 4%;
+}
+body {
+  font-family: 'Raleway';
+  letter-spacing: 2px;
+}
+input {
+  margin: 5px;
+  padding: 5px;
+}
+
+.input25 {
+  width: 25%;
+}
+
+.input75 {
+  width: 95%;
+  padding: 10px;
+}
+
+button {
+  width: 40%;
+  height: 100%;
+  margin: 15px;
+  padding: 10px;
+  font-family: 'Raleway';
+  background-color: #0D3B66;
+  color: white;
+  cursor: pointer;
+  border: 4px solid #0D3B66;
+  letter-spacing: 5px;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #0D3B66;
+  animation: pulse infinite 1s;
+}
+
+input[type="number"] ::-webkit-inner-spin-button,
+input[type="number"] ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

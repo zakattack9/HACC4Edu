@@ -13,11 +13,358 @@ body, html {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	background-color: red;
+	background-color: white;
+	font-family: 'Raleway', sans-serif;
+	overflow-x: hidden;
 }
 
 #forumTitle {
+	font-size: 25px;
 	width: 100%;
-	height: 75px;
+	height: 70px;
 	background-color: #8B94A3;
+	line-height: 70px;
+	padding-left: 40px;
+	font-weight: bold;
+	color: #2A324B;
+	letter-spacing: 5px;
+}
+
+#addIcon {
+	width: 25px;
+	display: block;
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	transition: 0.2s;
+}
+
+#addIcon:hover {
+	transform: scale(1.05);
+	transition: 0.2s;
+}
+
+#container {
+	width: 75%;
+	height: calc(100% - 70px);
+	position: absolute;
+	left: 0;
+	overflow-y: auto;
+	background-color: white;
+	z-index: 0;
+}
+
+#sideBar {
+	width: 25%;
+	height: calc(100% - 70px);
+	background-color: #0D3B66;
+	position: absolute;
+	right: 0;
+	z-index: 0;
+}
+
+#addThreadPop {
+	width: 100%;
+	height: calc(100% - 70px);
+	position: absolute;
+	z-index: 1;
+	display: none;
+}
+
+#addThreadPop:after {
+	content: '';
+	position: absolute;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	opacity: 0.7;
+ 	filter: blur(1px);
+}
+
+#threadPop {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	position: absolute;
+	z-index: 1;
+	display: none;
+}
+
+#threadWrap {
+	overflow-y: auto;
+	height: 100%;
+}
+
+#closeThreadPop {
+	width: 100%;
+	height: 40px;
+	background-color: white;
+	font-size: 40px;
+	font-weight: bold;
+	position: absolute;
+	top: 0px;
+	z-index: 1;
+}
+
+#popTitle {
+	width: 55%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 17px;
+	display: block;
+	margin-top: 55px;
+	margin-left: 14px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: bold;
+	background-color: #C9F2C7;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+}
+
+#closeThreadPopInner {
+  width: 30px;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: 15px;
+	bottom: 5px;
+	transition: 0.2s;
+}
+
+#closeThreadPopInner:hover {
+	transform: rotate(-5deg);
+	transition: 0.2s;
+}
+
+#popDesc {
+	width: 97%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	border-top-left-radius: 0px;
+	padding: 10px;
+	box-sizing: border-box;
+	background-color: #C9F2C7;
+	line-height: 25px;
+}
+
+#comContWrap {
+	width: 96%;
+	border: #0D3B66 solid 2px;
+	margin-top: 20px;
+	margin-bottom: 35px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 10px;
+	border-radius: 5px;
+}
+
+#addCommentWrap {
+	position: relative;
+	top: 10px;
+	right: 10px;
+	text-align: right;
+}
+
+#addCommentWrap img {
+	width: 20px;
+	transition: 0.2s;
+}
+
+#addCommentWrap img:hover {
+	transform: scale(0.95);
+	transition: 0.2s;
+}
+
+#commentsTitle {
+	padding-left: 35px;
+	box-sizing: border-box;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: 0.5px;
+}
+
+#commentsWrap {
+	padding-top: 20px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#commentsWrap textarea {
+	font-size: 14px;
+	width: 100%;
+	height: 150px;
+	border-radius: 5px;
+	border: lightgray 2px solid;
+	padding: 10px;
+	resize: none;
+	outline: none;
+	line-height: 25px;
+	box-sizing: border-box;
+}
+
+#commentsWrap textarea::-webkit-input-placeholder {
+	color: red;
+}
+
+#addCommentBtn {
+	font-size: 13.5px;
+	height: 30px;
+	line-height: 30px;
+}
+
+#addCommentBtn:hover {
+	text-decoration: underline;
+}
+
+#commentsWrap hr {
+	width: 90%;
+}
+
+.comments {
+	width: 100%;
+	background-color: #ebfaea;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	padding: 10px;
+	box-sizing: border-box;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	line-height: 25px;
+}
+
+.comBtmInf {
+	font-size: 12px;
+	height: 20px;
+	background-color: #ebfaea;
+	margin-bottom: 20px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding-left: 10px;
+}
+
+.thread {
+	background-color: #C9F2C7;
+	width: 95%;
+	height: 140px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	transition: 0.2s;
+	border-radius: 5px;
+}
+
+.thread:hover {
+	transform: scale(1.01);
+	transition: 0.2s;
+}
+
+.threadInfo {
+	width: calc(100% - 70px);
+	height: 120px;
+	float: left;
+}
+
+.threadTitle {
+	font-size: 17px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: bold;
+	padding-left: 20px;
+	padding-top: 15px;
+}
+
+.threadTitle:hover {
+	text-decoration: underline;
+}
+
+.threadDesc {
+	height: 70px;
+	padding-left: 20px;
+	padding-top: 10px;
+	overflow-y: hidden;
+	transition: 0.2s;
+}
+
+.vote {
+	width: 70px;
+	height: 120px;
+	display: block;
+	float: right;
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+
+.upArrow {
+	width: 30px;
+	height: 30px;
+	transform: rotate(-90deg);
+ 	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.downArrow {
+	width: 30px;
+	height: 30px;
+	transform: rotate(90deg);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+}
+
+.upArrow:hover, .downArrow:hover {
+	transform: scale(1.05) rotate(-90deg);
+	transition: 0.2s;
+}
+
+.downArrow:hover {
+	transform: scale(1.05) rotate(90deg);
+}
+
+.threadCount {
+	width: 30px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	transition: 0.2s;
+	text-align: center;
+	font-weight: bold;
+}
+
+.bottomOpt {
+	clear: both;
+	font-size: 12px;
+	height: 20px;
+	padding-left: 20px;
+	position: relative;
+	bottom: 0;
+	transition: 0.2s;
+}
+
+.dateCreated {
+	display: inline-block;
+	width: 30%;
+}
+
+.showMore {
+	display: inline-block;
+	width: 40%;
+	text-align: right;
+	cursor: pointer;
+}
+
+.showMore:hover {
+	text-decoration: underline;
+	transition: 0.3s;
 }

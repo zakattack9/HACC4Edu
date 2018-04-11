@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <meta charset="utf-8">
+    <title>Defenders of the Bay</title>
+  </head>
+  <body>
+    <div id="volunteerContainer">
+      <center><div>PLOT X</div></center>
+      <div id="registerPlot">
+        <form class="inputField" action="index.html" method="submit">
+          <p class="input25">First Name:</p>
+          <input class="input75" type="text" required>
+          <p class="input25">Last Name:</p>
+          <input class="input75" type="text" required>
+          <p class="input25">Email Address:</p>
+          <input class="input75" type="text" required>
+          <p class="input25">Phone Number:</p>
+          <input class="input25" type="text" maxlength="3">
+          <input class="input25" type="text" maxlength="3">
+          <input class="input25" type="text" maxlength="4">
+          <p class="input25">Organizations:</p>
+          <input class="input75" type="text">
+
+        </form>
+        <center>
+          <button onclick="finishForm()">SUBMIT</button>
+        </center>
+      </div>
+      <div id="plotStatistics">
+        <div class="relevantStat"></div>
+        <div class="relevantStat"></div>
+        <div class="relevantStat"></div>
+        <div class="relevantStat"></div>
+      </div>
+    </div>
+    <div id="submitInfo">
+      <center><div>Work Form</div></center>
+      <form class="inputField" action="index.html" method="submit">
+        <p class="input25">Bags Filled</p>
+        <input class="input75" type="number" required>
+        <p class="input25">Hours Worked</p>
+        <input class="input75" type="number" required>
+      </form>
+      <center>
+        <button onclick="finishWork()">SUBMIT</button>
+      </center>
+    </div>
+  </body>
+  <script  src="../scripts/register.js"></script>
+</html>
