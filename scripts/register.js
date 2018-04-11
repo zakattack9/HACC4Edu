@@ -1,5 +1,5 @@
 let inputForms = $(".input75");
-let numberForms = $(".input25");
+let numberForms = $(".input25")
 
 let plotData = [
   {
@@ -95,6 +95,10 @@ let finishForm = () => {
         "Organization" : "" + inputForms[3].value
       }
     )
+    $(".inputField")[0].style.display = "none";
+    $("#submitForm")[0].style.display = "none";
+    $("#loginCred")[0].style.display = "block";
+    $("#volunteerContainer")[0].style.height = "120px";
   }
 }
 
