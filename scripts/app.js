@@ -21,8 +21,8 @@ $(document).ready(function() {
     var remAlg = parseInt(algR.slice(0, 4))
     let algT = plotData[event.target.id].totalAlgae;
     var totAlg = parseInt(algT.slice(0, 4))
-    $("#infoHeader").text("WELCOME TO PLOT ALG" + event.target.id);
-    $("#secondaryHeader").text("ALG" + event.target.id);
+    $("#infoHeader").text("WELCOME TO PLOT ALG" + (parseInt(event.target.id) + 1));
+    $("#secondaryHeader").text("ALG" + (parseInt(event.target.id) + 1));
     $("#ownerText").text("OWNED BY " + plotData[event.target.id].plotManagement);
     $("#amtRegistered").text(plotData[event.target.id].totalWorkers);
     document.getElementById("progressVal").value = ((remAlg / totAlg) * 100);
