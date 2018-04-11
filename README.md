@@ -41,3 +41,15 @@ HACC4Edu Hackathon
 * could possibly use a Reddit format to upvote/downvote infected trees around the area
 
 
+#### Notes
+- tracking algae impacts
+- why it is important to clear algae (ex. save monkseals)
+- how does algae affect coral
+- figure out what algaes are dominant in an area when users submit completion
+
+
+
+
+
+
+
