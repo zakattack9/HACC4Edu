@@ -1,5 +1,4 @@
 #volunteerContainer, #submitInfo {
-  display: none;
   border-radius: 10px;
   box-sizing: border-box;
   height: 75%;
@@ -9,10 +8,62 @@
   margin-left: 30%;
   margin-top: 4%;
 }
+
+ul {
+    right: 0;
+    top: 0;
+    list-style-type: none;
+    width: 15%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2FBF71;
+    float: left;
+    text-align: center;
+    position: fixed;
+}
+
+ul h1{
+  color: white;
+  font-size: 22px;
+}
+
+li a {
+    display: block;
+    color: #2A324B;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Raleway';
+    letter-spacing: 7px;
+}
+
+li a:hover {
+    background-color: white;
+    animation: pulse 1s infinite;
+    cursor: pointer;
+}
+
+#rightBar {
+  height: 100%;
+  float: left;
+  background-color: #2FBF71;
+  width: 30%;
+}
+
+#rightBar h1, #midContainer h1 {
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+}
+
 body {
   font-family: 'Raleway';
   letter-spacing: 2px;
+  background-color: #8B94A3;
 }
+
 input {
   margin: 5px;
   padding: 5px;
@@ -46,7 +97,7 @@ button:hover {
   animation: pulse infinite 1s;
 }
 
-input[type="number"] ::-webkit-inner-spin-button,
+/* input[type="number"] ::-webkit-inner-spin-button,
 input[type="number"] ::-webkit-outer-spin-button {
   transform: scale(2);
-}
+} */
