@@ -11,11 +11,21 @@ $(document).ready(function() {
 				`)
 			}
 		});
-		
+
+		$('#creditsButton').click(function() {
+			$('#creditsPopUp').css("display", "block");
+		});
+
+		$('.menuClose').click(function() {
+		if(document.getElementById('creditsPopUp').style.display == "block") {
+			$('#creditsPopUp').css("display", "none");
+		}
+		});
+
 		$('.showMore').on('click', function() {
 			let parentEl = this.parentElement.parentElement;
 			let descEl = $(parentEl).find('.threadInfo').find('.threadDesc')[0];
-			
+
 			let bottomOptEl = $(parentEl).find('.bottomOpt')[0];
 			let showMoreTxt = $(bottomOptEl).find('.showMore')[0];
 
@@ -72,6 +82,7 @@ $(document).ready(function() {
 
 	$(document).on('click', '#addIcon', function() {
 		$('#addIcon').toggleClass('exitPop');
+		$('#creditsPopUp').css("display", "none");
 
 		if($('#addIcon').hasClass('exitPop')){
 			$('#addIcon')[0].style.transform = "rotate(-45deg)";
@@ -117,8 +128,8 @@ $(document).ready(function() {
 				<textarea></textarea>
 				<div id="addCommentBtn">Add Comment</div>
 				<hr>
-			`)		
-			
+			`)
+
 			$('#addCommentBtn').on('click', function() {
 				if ($('#commentsWrap textarea').length > 0) {
 					let newComment = $('#commentsWrap textarea').val();
@@ -193,6 +204,3 @@ $(document).ready(function() {
 		$('#sideNav')[0].style.width = 0 + "px";
 	})
 });
-
-
-

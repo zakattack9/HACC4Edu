@@ -355,7 +355,7 @@ progress[value]::-webkit-progress-bar {
   top:0; bottom:0;
   margin: auto;
   display: none;
-  background-color: RGBA(201,242,199, 0.95);
+  background-color: RGBA(201,242,199, 0.5);
   border:2px solid #ccc;
   -moz-box-shadow: 0 1px 5px #333;
   -webkit-box-shadow: 0 1px 5px #333;
@@ -457,6 +457,7 @@ aside {
   box-shadow: 0 0 100px 10px #fff;
   transition: all ease 0.3s;
   cursor: pointer;
+  margin-bottom: 10%;
 }
 
 aside:hover {
@@ -691,4 +692,26 @@ aside:hover ul li:nth-child(2) {
 aside:hover ul li:nth-child(3) {
   animation: social_animation 2000ms ease-in-out both;
   animation-delay: 1.25s;
+}
+
+a.boxClose{
+  position: absolute;
+  top: 0;
+  right: 0;
+    float:right;
+    cursor:pointer;
+    color: black;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 30px;
+}
+
+a.boxClose:hover {
+  color: white;
+}
+
+.boxClose:before {
+    content: "×";
 }
