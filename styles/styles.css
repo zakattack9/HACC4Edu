@@ -161,6 +161,7 @@ li a:hover {
   width: 99%;
 column-count: 3;
 column-gap: 0px;
+position: relative;
 }
 
 .imgContainer {
@@ -179,12 +180,13 @@ column-gap: 0px;
   transition: 0.3s;
   border-radius: 3px;
   width: 100%;
+  height: 100%;
   max-height: 200px;
 }
 
 .plot:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    animation: pulse infinite 1s;
+    cursor: pointer;
 }
 
 .cardContainer {
@@ -192,6 +194,43 @@ column-gap: 0px;
     color: black;
 }
 
+.imgContainer:hover {
+  animation: pulse infinite 1.5s;
+}
+
+#infoHeader {
+  border-bottom: 1px solid black;
+}
+
+h4{
+    background: #2FBF71;
+    color: white;
+    font-size: 13px;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    text-align: center;
+    display:none;
+    margin-bottom: 20px;
+}
+
+h4:after{
+    content:'';
+    position:absolute;
+    height:10px;
+    border-bottom:5px solid #dfdfdf;
+    border-right:5px solid #dfdfdf;
+    background:#f8f8f8;
+    left:50%;
+    margin-left:-10px;
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+/* .imgContainer:hover h4{
+    display:block;
+} */
 
 #plotPopUp {
   width: 50%;
@@ -221,10 +260,11 @@ progress[value] {
   height: 20px;
 }
 
-progress {
-  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-transform: rotate(-90deg);
+.progressBar {
+  display: table;
+  margin: 0 auto;
 }
+
 progress[value]::-webkit-progress-bar {
   background-color: white;
   border-radius: 2px;
