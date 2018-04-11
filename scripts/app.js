@@ -590,7 +590,7 @@ $(document).ready(function() {
   // }
 
 
-  $('.plot').click(function() {
+  $('.plotItem').click(function() {
     let algR = plotData[event.target.id].removedAlgae;
     var remAlg = parseInt(algR.slice(0, 4))
     let algT = plotData[event.target.id].totalAlgae;
@@ -612,13 +612,21 @@ $(document).ready(function() {
 
   $('.menuClose').click(function() {
     if(document.getElementById('plotPopUp').style.display == "block") {
-    $('#plotPopUp').css("display", "none");
-    $('#plotContainer').css("filter", "blur(0px)");
-  }
+      $('#plotPopUp').css("display", "none");
+      $('#plotContainer').css("filter", "blur(0px)");
+    }
 
-  if(document.getElementById('creditsPopUp').style.display == "block") {
-    $('#creditsPopUp').css("display", "none");
-  }
+    if(document.getElementById('creditsPopUp').style.display == "block") {
+      $('#creditsPopUp').css("display", "none");
+    }
 
   });
+
+  $('#overlayOpen').on('click', function() {
+    $('#sideNav')[0].style.width = "300px";
+  })
+
+  $('#closeNav').on('click', function() {
+    $('#sideNav')[0].style.width = "0";
+  })
 });
