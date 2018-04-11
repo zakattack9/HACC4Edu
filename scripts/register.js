@@ -65,9 +65,6 @@ let plotData = [
 ]
 
 let randomPlot = Math.floor(Math.random() * plotData.length)
-function randomPlotGrab () {
-  return plotData[randomPlot];
-}
 
 // let data = $(".relevantStat");
 //

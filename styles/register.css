@@ -4,7 +4,7 @@
   height: 75%;
   width: 40%;
   padding: 20px;
-  background-color: #C9F2C7;
+  background-color: #04776C;
   margin-left: 30%;
   margin-top: 4%;
 }
@@ -18,7 +18,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #2FBF71;
+    background-color: #04776C;
     float: left;
     text-align: center;
     position: fixed;
@@ -61,7 +61,7 @@ li a:hover {
 body {
   font-family: 'Raleway';
   letter-spacing: 2px;
-  background-color: #8B94A3;
+  background-color: #0B3541;
 }
 
 input {
@@ -84,16 +84,18 @@ button {
   margin: 15px;
   padding: 10px;
   font-family: 'Raleway';
-  background-color: #0D3B66;
+  background-color: #E7F1B8;
   color: white;
   cursor: pointer;
-  border: 4px solid #0D3B66;
-  letter-spacing: 5px;
+  border: 4px solid #E7F1B8;
+  font-size: 30px;
+  letter-spacing: 9px;
+  font-weight: bolder;
 }
 
 button:hover {
   background-color: transparent;
-  color: #0D3B66;
+  color: #E7F1B8;
   animation: pulse infinite 1s;
 }
 
