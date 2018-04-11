@@ -18,6 +18,43 @@ body, html {
 	overflow-x: hidden;
 }
 
+ul {
+    list-style-type: none;
+    width: 15%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2FBF71;
+    float: left;
+    text-align: center;
+}
+
+ul h1{
+  color: white;
+  font-size: 22px;
+}
+
+li a {
+    display: block;
+    color: #2A324B;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Raleway';
+    letter-spacing: 7px;
+}
+
+li a:hover {
+    background-color: white;
+    animation: pulse 1s infinite;
+    cursor: pointer;
+}
+
+.active {
+  background-color: white;
+}
+
 #forumTitle {
 	font-size: 25px;
 	width: 100%;
@@ -28,6 +65,7 @@ body, html {
 	font-weight: bold;
 	color: #2A324B;
 	letter-spacing: 5px;
+	user-select: none;
 }
 
 #addIcon {
@@ -46,6 +84,7 @@ body, html {
 	right: 70px;
 	top: 20px;
 	transition: 0.2s;
+	cursor: pointer;
 }
 
 #menuIcon:hover {
@@ -55,6 +94,7 @@ body, html {
 #addIcon:hover {
 	transform: scale(1.08);
 	transition: 0.2s;
+	cursor: pointer;
 }
 
 #sideNav {
@@ -76,6 +116,7 @@ body, html {
 }
 
 #closeNav:hover #closeNavInner {
+	cursor: pointer;
 	display: block;
 	width: 50px;
 	transform: scale(1.05);
@@ -211,6 +252,7 @@ a {
 	margin-left: auto;
 	margin-right: 20px;
 	transition: 0.2s;
+	cursor: pointer;
 }
 
 #createThread:hover {
@@ -540,12 +582,12 @@ a {
 	margin-top: 20px;
 }
 
+#warningBox {
+	font-family: 'Raleway';
+}
+
 iframe {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
 }
-
-
-
-
