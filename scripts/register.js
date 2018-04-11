@@ -6,13 +6,13 @@ let plotData = [
     "totalAlgae" : "2385kg",
     "removedAlgae" : "322kg",
     "totalWorkers" : "21",
-    "plotManagement" : "Gurutze Bergliot"
+    "plotManagement" : "Nyler Tichols"
   },
   {
     "totalAlgae" : "4469kg",
     "removedAlgae" : "3053kg",
     "totalWorkers" : "44",
-    "plotManagement" : "Duke Piotr"
+    "plotManagement" : "Tylan Ducker"
   },
   {
     "totalAlgae" : "2551kg",
