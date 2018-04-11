@@ -39,9 +39,66 @@ body, html {
 	transition: 0.2s;
 }
 
+#menuIcon {
+  width: 25px;
+	display: block;
+	position: absolute;
+	right: 70px;
+	top: 20px;
+	transition: 0.2s;
+}
+
+#menuIcon:hover {
+	transform: rotate(90deg);
+}
+
 #addIcon:hover {
+	transform: scale(1.08);
+	transition: 0.2s;
+}
+
+#sideNav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: calc(100% - 70px);
+	width: 0px;
+	background-color: #2FBF71;
+	margin-top: 70px;
+	z-index: 1;
+	transition: 0.3s;
+}
+
+#closeNav {
+	font-size: 40px;
+	margin-left: 20px;
+	transition: 0.2s;
+}
+
+#closeNav:hover #closeNavInner {
+	display: block;
+	width: 50px;
 	transform: scale(1.05);
 	transition: 0.2s;
+}
+
+.navItem {
+	height: 65px;
+	letter-spacing: 2px;
+	line-height: 65px;
+	text-align: center;
+	font-weight: bold;
+	transition: 0.2s;
+}
+
+.navItem:hover {
+	background-color: white;
+	transition: 0.2s;
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }
 
 #container {
@@ -82,6 +139,85 @@ body, html {
  	filter: blur(1px);
 }
 
+#createFormTitle {
+	font-size: 20px;
+	padding-top: 15px;
+	padding-left: 20px;
+	font-weight: bold;
+}
+
+#threadForm  {
+	width: 40%;
+	height: 410px;
+	background-color: #2FBF71;
+	opacity: 1;
+	position: relative;
+	z-index: 2;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 60px;
+	border-radius: 10px;
+}
+
+#formTitle {
+	margin-left: 4%;
+}
+
+#formTitle input {
+	font-size: 13px;
+	outline: none;
+	border: #8B94A3 solid 2px;
+	border-radius: 5px;
+	height: 25px;
+	width: 94%;
+}
+
+#formDescription {
+	margin-left: 4%;
+}
+
+#formDescription textarea {
+	font-size: 13px;
+	outline: none;
+	border: #8B94A3 solid 2px;
+	border-radius: 5px;
+	height: 100px;
+	width: 93%;
+	resize: none;
+}
+
+#formTags {
+	margin-left: 4%;
+}
+
+#formTags input {
+	font-size: 13px;
+	outline: none;
+	border: #8B94A3 solid 2px;
+	border-radius: 5px;
+	height: 25px;
+	width: 94%;
+}
+
+#createThread {
+	background-color: #0D3B66;
+	width: 80px;
+	height: 30px;
+	color: white;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 15px;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: 20px;
+	transition: 0.2s;
+}
+
+#createThread:hover {
+	transform: scale(1.03);
+	transition: 0.2s;
+}
+
 #threadPop {
 	width: 100%;
 	height: 100%;
@@ -92,6 +228,11 @@ body, html {
 }
 
 #threadWrap {
+	overflow-y: auto;
+	height: 100%;
+}
+
+#threadWrapPop {
 	overflow-y: auto;
 	height: 100%;
 }
@@ -261,6 +402,10 @@ body, html {
 	border-radius: 5px;
 }
 
+.thread:last-child {
+	margin-bottom: 30px;
+}
+
 .thread:hover {
 	transform: scale(1.01);
 	transition: 0.2s;
@@ -368,3 +513,39 @@ body, html {
 	text-decoration: underline;
 	transition: 0.3s;
 }
+
+#sideBlock {
+	width: 90%;
+	padding: 10px;
+	background-color: white;
+	box-sizing: border-box;
+	border-radius: 5px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+}
+
+#calendarTitle {
+	height: 30px;
+	line-height: 10px;
+	background-color: white;
+	width: 90%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	padding: 10px;
+	box-sizing: border-box;
+	margin-top: 20px;
+}
+
+iframe {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+
