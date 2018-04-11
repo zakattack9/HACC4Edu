@@ -237,7 +237,7 @@ function initMap() {
         '<div id="bodyContent">'+
         '<p><b>Plot</b>, is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
         'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-        '<p>REGISTER HERE: <a href="./register.html"></a> '+
+        '<p>REGISTER HERE: <a href="register.html">Plot A1</a> '+
         '</div>';
 
   var infowindow1 = new google.maps.InfoWindow({
