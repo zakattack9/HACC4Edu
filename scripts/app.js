@@ -1,6 +1,6 @@
 console.log("hello");
 
-var map;
+var map, infoWindow;
 var infoWindow1;
 var infoWindow2;
 var infoWindow3;
@@ -21,12 +21,11 @@ function initMap() {
         zoom: 15.5,
         disableDefaultUI: true,
         mapTypeId : "satellite",
-        gestureHandling : "none"
     });
 
     // Show the lat and lng under the mouse cursor.
     var coordsDiv = document.getElementById('coords');
-    map.controls[google.maps.ControlPosition.TOP_CENTER].push(coordsDiv);
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(coordsDiv);
     map.addListener('mousemove', function(event) {
       coordsDiv.textContent =
           'lat: ' + event.latLng.lat() + ', ' +
@@ -131,10 +130,11 @@ function initMap() {
 
     var a5 = new google.maps.Polygon({
             paths: a5Coords,
-            strokeColor: '#C9F2C7',
+            strokeColor: 'red',
             strokeOpacity: 0.8,
-            strokeWeight: 1,
-            fillOpacity: 0
+            strokeWeight: 5,
+            fillColor: 'red',
+            fillOpacity: 0.35
           });
       a5.setMap(map);
 
@@ -165,10 +165,11 @@ function initMap() {
 
     var a7 = new google.maps.Polygon({
             paths: a7Coords,
-            strokeColor: '#C9F2C7',
+            strokeColor: 'red',
             strokeOpacity: 0.8,
-            strokeWeight: 1,
-            fillOpacity: 0
+            strokeWeight: 5,
+            fillColor: 'red',
+            fillOpacity: 0.35
           });
       a7.setMap(map);
 
@@ -181,10 +182,11 @@ function initMap() {
 
     var a8 = new google.maps.Polygon({
             paths: a8Coords,
-            strokeColor: '#C9F2C7',
+            strokeColor: 'red',
             strokeOpacity: 0.8,
-            strokeWeight: 1,
-            fillOpacity: 0
+            strokeWeight: 5,
+            fillColor: 'red',
+            fillOpacity: 0.35
           });
       a8.setMap(map);
 
@@ -224,10 +226,10 @@ function initMap() {
       map.data.add({geometry: new google.maps.Data.Polygon([a2Coords])});
       map.data.add({geometry: new google.maps.Data.Polygon([a3Coords])});
       map.data.add({geometry: new google.maps.Data.Polygon([a4Coords])});
-      map.data.add({geometry: new google.maps.Data.Polygon([a5Coords])});
+      // map.data.add({geometry: new google.maps.Data.Polygon([a5Coords])});
       map.data.add({geometry: new google.maps.Data.Polygon([a6Coords])});
-      map.data.add({geometry: new google.maps.Data.Polygon([a7Coords])});
-      map.data.add({geometry: new google.maps.Data.Polygon([a8Coords])});
+      // map.data.add({geometry: new google.maps.Data.Polygon([a7Coords])});
+      // map.data.add({geometry: new google.maps.Data.Polygon([a8Coords])});
       map.data.add({geometry: new google.maps.Data.Polygon([a9Coords])});
       map.data.add({geometry: new google.maps.Data.Polygon([a10Coords])});
 
@@ -235,7 +237,7 @@ function initMap() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Plot A1</h1>'+
         '<div id="bodyContent">'+
-        '<p><b>Plot</b>, is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+        '<p><b>Plot A1</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
         'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
         '<p>REGISTER HERE: <a href="register.html">Plot A1</a> '+
         '</div>';
@@ -248,7 +250,7 @@ function initMap() {
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Plot A2</h1>'+
     '<div id="bodyContent">'+
-    '<p><b>Plot</b>, is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    '<p><b>Plot A2</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
     '<p>REGISTER HERE: <a href="register.html">Plot A2</a> '+
     '</div>';
@@ -261,7 +263,7 @@ function initMap() {
       '</div>'+
       '<h1 id="firstHeading" class="firstHeading">Plot A3</h1>'+
       '<div id="bodyContent">'+
-      '<p><b>Plot</b>, is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+      '<p><b>Plot A3</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
       'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
       '<p>REGISTER HERE: <a href="register.html">Plot A3</a> '+
       '</div>';
@@ -274,7 +276,7 @@ function initMap() {
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Plot A4</h1>'+
     '<div id="bodyContent">'+
-    '<p><b>Plot</b>, is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    '<p><b>Plot A4</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
     '<p>REGISTER HERE: <a href="register.html">Plot A4</a> '+
     '</div>';
@@ -286,9 +288,9 @@ function initMap() {
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Plot A5</h1>'+
     '<div id="bodyContent">'+
-    '<p><b>Plot</b>, is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    '<p><b>Plot A5</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-    '<p>REGISTER HERE: <a href="register.html">Plot A5</a> '+
+    '<p>Work Log: <a href="log.html">Plot A5</a> '+
     '</div>';
 
     var infowindow5 = new google.maps.InfoWindow({
@@ -299,7 +301,7 @@ function initMap() {
       '</div>'+
       '<h1 id="firstHeading" class="firstHeading">Plot A6</h1>'+
       '<div id="bodyContent">'+
-      '<p><b>Plot</b>, is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+      '<p><b>Plot A6</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
       'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
       '<p>REGISTER HERE: <a href="register.html">Plot A6</a> '+
       '</div>';
@@ -312,9 +314,9 @@ function initMap() {
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Plot A7</h1>'+
     '<div id="bodyContent">'+
-    '<p><b>Plot</b>, is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    '<p><b>Plot A7</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-    '<p>REGISTER HERE: <a href="register.html">Plot A7</a> '+
+    '<p>Work Log: <a href="log.html">Plot A7</a> '+
     '</div>';
 
   var infowindow7 = new google.maps.InfoWindow({
@@ -325,9 +327,9 @@ function initMap() {
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Plot A8</h1>'+
     '<div id="bodyContent">'+
-    '<p><b>Plot</b>, is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    '<p><b>Plot A8</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
-    '<p>REGISTER HERE: <a href="register.html">Plot A8</a> '+
+    '<p>Work Log: <a href="log.html">Plot A8</a> '+
     '</div>';
 
   var infowindow8 = new google.maps.InfoWindow({
@@ -338,7 +340,7 @@ function initMap() {
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Plot A9</h1>'+
     '<div id="bodyContent">'+
-    '<p><b>Plot</b>, is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    '<p><b>Plot A9</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
     '<p>REGISTER HERE: <a href="register.html">Plot A9</a> '+
     '</div>';
@@ -350,7 +352,7 @@ function initMap() {
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Plot A10</h1>'+
     '<div id="bodyContent">'+
-    '<p><b>Plot</b>, is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    '<p><b>Plot A10</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
     '<p>REGISTER HERE: <a href="register.html">Plot A10</a> '+
     '</div>';
@@ -458,35 +460,56 @@ function initMap() {
    marker10.addListener('click', function() {
      infowindow10.open(map, marker10);
    });
+   map.data.addListener('mouseover', function(event) {
+     map.data.revertStyle();
+     map.data.overrideStyle(event.feature, {strokeWeight: 8});
+   });
 
+   map.data.addListener('mouseout', function(event) {
+     map.data.revertStyle();
+   });
 
-      // console.log(map.data.b.b[4]);
-      // var plot1 = map.data.b.b[4];
-      // // When the user clicks, set 'isColorful', changing the color of the letters.
-      // // When the user hovers, tempt them to click by outlining the letters.
-      // // Call revertStyle() to remove all overrides. This will use the style rules
-      // // defined in the function passed to setStyle()
-      map.data.addListener('mouseover', function(event) {
-        map.data.revertStyle();
-        map.data.overrideStyle(event.feature, {strokeWeight: 8});
-      });
+   map.data.setStyle(function(feature) {
+     var color = '#C9F2C7';
+     if (feature.getProperty('isColorful')) {
+       color = feature.getProperty('color');
+     }
+     return /** @type {google.maps.Data.StyleOptions} */({
+       strokeColor: color,
+       strokeWeight: 1,
+       strokeOpacity: 0.98,
+     });
+   });
 
-      map.data.addListener('mouseout', function(event) {
-        map.data.revertStyle();
-      });
+   infoWindow = new google.maps.InfoWindow;
 
-      map.data.setStyle(function(feature) {
-        var color = '#C9F2C7';
-        if (feature.getProperty('isColorful')) {
-          color = feature.getProperty('color');
-        }
-        return /** @type {google.maps.Data.StyleOptions} */({
-          strokeColor: color,
-          strokeWeight: 1,
-          strokeOpacity: 0.98,
-        });
-      });
-};
+   // Try HTML5 geolocation.
+   if (navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(function(position) {
+       var pos = {
+         lat: position.coords.latitude,
+         lng: position.coords.longitude
+       };
+
+       infoWindow.setPosition(pos);
+       infoWindow.setContent('Location found.');
+       infoWindow.open(map);
+     }, function() {
+       handleLocationError(true, infoWindow, map.getCenter());
+     });
+   } else {
+     // Browser doesn't support Geolocation
+     handleLocationError(false, infoWindow, map.getCenter());
+   }
+ }
+
+ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+   infoWindow.setPosition(pos);
+   infoWindow.setContent(browserHasGeolocation ?
+                         'Error: The Geolocation service failed.' :
+                         'Error: Your browser doesn\'t support geolocation.');
+   infoWindow.open(map);
+ }
 
 $(document).ready(function() {
   // var gAlg = 0;
