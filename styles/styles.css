@@ -1,8 +1,8 @@
 /*
 
 #8B94A3 GRAY-BLUE
-#C9F2C7 TEA GREEN
-#2A324B GUNMETAL
+#04776C TEA GREEN
+#0B3541 GUNMETAL
 #0D3B66 DARK MIDNIGHT BLUE
 #2FBF71 MEDIUM SEA GREEN
 
@@ -32,7 +32,7 @@ h1, h2, h3 {
   right: 0;
   height: calc(100% - 70px);
   width: 0px;
-  background-color: #2FBF71;
+  background-color: #04776C;
   margin-top: 70px;
   z-index: 2;
   transition: 0.3s;
@@ -94,7 +94,7 @@ a {
 }
 
 /* #content {
-  background-color: #C9F2C7;
+  background-color: #04776C;
 } */
 
 /* The location pointed to by the popup tip. */
@@ -103,7 +103,7 @@ a {
     position: absolute;
     /* The max width of the info window. */
     width: 200px;
-    background-color: #C9F2C7;
+    background-color: #04776C;
 }
 /* The bubble is anchored above the tip. */
 .popup-bubble-anchor {
@@ -135,7 +135,7 @@ a {
   left: 0;
   transform: translate(-50%, -100%);
   /* Style the info window. */
-  background-color: #C9F2C7;
+  background-color: #04776C;
   padding: 5px;
   border-radius: 5px;
   font-family: sans-serif;
@@ -163,7 +163,7 @@ ul h1{
 
 li a {
     display: block;
-    color: #2A324B;
+    color: #0B3541;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -183,7 +183,7 @@ li a:hover {
 #rightBar {
   height: 100%;
   float: left;
-  background-color: #C9F2C7;
+  background-color: #04776C;
   width: 30%;
 }
 
@@ -196,7 +196,7 @@ li a:hover {
 #midContainer h1 {
   height: 70px;
   line-height: 70px;
-  background-color: #8B94A3;
+  background-color: #E7F1B8;
   margin-top: 0;
   letter-spacing: 10px;
 }
@@ -205,7 +205,7 @@ li a:hover {
   float: right;
   width: 70%;
   height: 100%;
-  background-color: #2A324B;
+  background-color: #0B3541;
 }
 
 #overlayOpen {
@@ -415,8 +415,21 @@ progress[value] {
   -webkit-appearance: none;
    appearance: none;
 
+   background-color: #0B3541;
+
   width: 250px;
   height: 20px;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image:
+	   -webkit-linear-gradient(top,
+	                           rgba(82,189,122, .25),
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, #0B3541, #E7F1B8);
+
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
 .progressBar {
@@ -537,7 +550,7 @@ aside {
   display: block;
   height: 200px;
   width: 200px;
-  background-color: #2A324B;
+  background-color: #0B3541;
   overflow: hidden;
   box-shadow: 0 0 100px 10px #fff;
   transition: all ease 0.3s;
@@ -811,4 +824,9 @@ a.boxClose:hover {
   margin: auto;
   height: 200px;
   background-color: white;
+}
+
+progress {
+  display: table;
+ margin: 0 auto;
 }
