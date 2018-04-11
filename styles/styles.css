@@ -36,7 +36,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #C9F2C7;
+    background-color: #2FBF71;
     float: left;
 }
 
@@ -52,6 +52,7 @@ li a {
 
 li a:hover {
     background-color: white;
+    animation: pulse 1s infinite;
 }
 
 #rightBar {
@@ -89,6 +90,10 @@ div#plotContainer img {
   margin: 2px;
 }
 
+img:hover {
+  animation: pulse 1s infinite;
+}
+
 .plot {
   cursor: pointer;
   /* margin: auto; */
@@ -115,8 +120,13 @@ div#plotContainer img {
   top:0; bottom:0;
   margin: auto;
   display: none;
-  background-color: yellow;
-  justify-content: center;
+  background-color: RGBA(13,59,102, 0.9);
+  border:2px solid #ccc;
+  -moz-border-radius: 20px;
+  -webkit-border-radius:20px;
+  -khtml-border-radius:20px;
+  -moz-box-shadow: 0 1px 5px #333;
+  -webkit-box-shadow: 0 1px 5px #333;
 }
 
 a.boxClose{
@@ -154,5 +164,9 @@ a.boxClose:hover {
   width: 49%;
   height: 200px;
   margin: auto;
-  margin-top: 2px;
+  margin-top: 5px;
+}
+
+.statBox:hover {
+  animation: pulse 1s;
 }
