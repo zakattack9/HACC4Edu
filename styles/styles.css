@@ -14,6 +14,7 @@ body, html {
   height: 100%;
   overflow: auto;
   font-family: 'Raleway';
+  user-select: none;
 }
 
 h1, h2, h3 {
@@ -58,6 +59,7 @@ h1, h2, h3 {
   text-align: center;
   font-weight: bold;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .navItem:hover {
@@ -78,9 +80,6 @@ a {
 <<<<<<< HEAD
   display: none;
 }*/
-=======
-}
->>>>>>> 1a8a396c0efced62ec5a0c826bec2b7633072d77
 
 #map {
   height: 100vh;
@@ -199,6 +198,7 @@ li a:hover {
   line-height: 70px;
   background-color: #8B94A3;
   margin-top: 0;
+  letter-spacing: 10px;
 }
 
 #midContainer {
@@ -213,6 +213,7 @@ li a:hover {
   right: 20px;
   top: 20px;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 #overlayOpen img{
@@ -222,6 +223,7 @@ li a:hover {
 #overlayOpen:hover{
   transform: rotate(90deg);
   transition: 0.2s;
+  cursor: pointer;
 }
 /*
 #masonry {
@@ -358,6 +360,7 @@ h4:after{
   font-size: 30px;
   line-height: 200px;
   letter-spacing: 3px;
+  cursor: pointer;
 }
 
 .plotItem:hover {
@@ -372,6 +375,7 @@ h4:after{
   position: relative;
   z-index: 1;
   color: white;
+  letter-spacing: 10px;
 }
 
 .plotText:after {
@@ -795,4 +799,16 @@ a.boxClose:hover {
 
 .boxClose:before {
     content: "×";
+}
+
+#statContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.statBlock {
+  width: 200px;
+  margin: auto;
+  height: 200px;
+  background-color: white;
 }

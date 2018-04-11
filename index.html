@@ -36,12 +36,22 @@
 		<div id="rightBar">
 				<h1>OVERALL STATISTICS</h1>
 				<div id="statContainer">
-					<h3>3.8 MILLION out of 5 MILLION ALGAE CLEARED</h3>
-					<div class="progressBar"><progress id="progressVal" value="" max="100"></progress></div>
-				</div>
-				<h3>4 out of 10 PLOTS are REGISTERED</h3>
-					<h3>82% of ALGAE IS DIATOM</h3>
-					<h3>18% of ALGAE IS WAKAME</h3>
+          <div class="statBlock" style="width: 400px;">
+            <h2>TOTAL AMOUNT OF ALGAE COLLECTED</h2>
+            <h2>3.8 MILLION</h2>
+          </div>
+          <div class="statBlock" style="margin-top: 20px">
+            <h2>PLOTS LEFT TO BE REGISTERED</h2>
+            <h2 style="font-size: 30px">6</h2>
+          </div>
+          <div class="statBlock" style="margin-top: 20px">
+            <h2>TOTAL WORKERS REGISTERED</h2>
+            <H2>384</H2>
+          </div>
+          <div class="statBlock" style="width: 400px; margin-top: 20px">
+            <h2>TOTAL WORKERS REGISTERED</h2>
+            <H2>384</H2>
+          </div>
 				</div>
 		</div>
 
@@ -50,7 +60,7 @@
 				<img src="images/menuIcon.png">
 			</div>
 
-			<h1>PLOT STATS</h1>
+			<h1>PLOT INFORMATION</h1>
 
 			<div id="plotWrap">
 				<div id="plotContainer">
@@ -167,59 +177,62 @@
 			<a class="boxClose menuClose"></a>
 		</div>
 
-		<div id="creditsPopUp">
-				<div class="cardContainer">
-						<aside class="profile-card">
-								<!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
-								<header>
-										<img src="images/Mark.jpg">
-										</a>
-										<h1>MARK DEMESILLO</h1>
-										<h2>Tall Guy</h2>
-								</header>
-								<div class="profile-bio">
-										<p>Hello there!</p>
-								</div>
-						</aside>
-						<aside class="profile-card">
-								<!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
-								<header>
-										<img src="images/Kyle.jpg">
-										</a>
-										<h1>KYLE LINGAT</h1>
-										<h2>JavaScript Deficient</h2>
-								</header>
-								<div class="profile-bio">
-										<p>Hello there!</p>
-								</div>
-						</aside>
-						<aside class="profile-card">
-								<!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
-								<header>
-										<img src="images/Zak.jpg">
-										</a>
-										<h1>ZAK SAKATA</h1>
-										<h2>At Track Meet</h2>
-								</header>
-								<div class="profile-bio">
-										<p>Hello there!</p>
-								</div>
-						</aside>
-						<aside class="profile-card">
-								<!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
-								<header>
-										<img src="images/Dylan.jpg">
-										</a>
-										<h1>DYLAN TUCKER</h1>
-										<h2>At Track Meet</h2>
-								</header>
-								<div class="profile-bio">
-										<p>Hello there!</p>
-								</div>
-						</aside>
-				</div>
-				<a class="boxClose menuClose"></a>
-		</div>
+    <div id="creditsPopUp" class="animated slideInRight">
+        <div class="cardContainer">
+            <aside class="profile-card">
+                <!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+                <header>
+                    <img src="../images/Mark.jpg">
+                    </a>
+                    <h1>MARK DEMESILLO</h1>
+                    <h2>Tall Guy</h2>
+                </header>
+                <div class="profile-bio">
+                    <p>Pretty much did most of the functions</p>
+                </div>
+            </aside>
+            <aside class="profile-card">
+                <!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+                <header>
+                    <img src="../images/Kyle.jpg">
+                    </a>
+                    <h1>KYLE LINGAT</h1>
+                    <h2>JavaScript Deficient</h2>
+                </header>
+                <div class="profile-bio">
+                    <p>CSS Guy that kept on breaking the app</p>
+                </div>
+            </aside>
+            <aside class="profile-card">
+                <!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+                <header>
+                    <img src="../images/Zak.jpg">
+                    </a>
+                    <h1>ZAK SAKATA</h1>
+                    <h2>Project Manager</h2>
+                </header>
+                <div class="profile-bio">
+                    <p>Worked on everything</p>
+                </div>
+            </aside>
+            <aside class="profile-card">
+                <!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+                <header>
+                    <img src="../images/Dylan.jpg">
+                    </a>
+                    <h1>DYLAN TUCKER</h1>
+                    <h2>At Track Meet</h2>
+                </header>
+                <div class="profile-bio">
+                    <p>The API Wizard</p>
+                </div>
+            </aside>
+        </div>
+        <a class="boxClose menuClose"></a>
+
+        <div id="plotPopUp">
+        </div>
+    </div>
 
 </body>
 
