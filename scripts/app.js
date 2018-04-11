@@ -231,270 +231,221 @@ function initMap() {
       map.data.add({geometry: new google.maps.Data.Polygon([a9Coords])});
       map.data.add({geometry: new google.maps.Data.Polygon([a10Coords])});
 
-      var contentString1 = '<div>'+
-      '<embed src="register.html">'+
-      '</div>';
+      var contentString1 = '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Plot A1</h1>'+
+        '<div id="bodyContent">'+
+        '<p><b>Plot</b>, is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+        'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
+        '<p>REGISTER HERE: <a href="register.html">Plot A1</a> '+
+        '</div>';
 
   var infowindow1 = new google.maps.InfoWindow({
     content: contentString1
   });
 
-  var contentString2 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString2 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
+    '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+    'sandstone rock formation in the southern part of the '+
+    'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+    'south west of the nearest large town, Alice Springs; 450&#160;km '+
+    '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+    'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+    'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+    'Aboriginal people of the area. It has many springs, waterholes, '+
+    'rock caves and ancient paintings. Uluru is listed as a World '+
+    'Heritage Site.</p>'+
+    '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+    'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+    '(last visited June 22, 2009).</p>'+
+    '</div>';
 
     var infowindow2 = new google.maps.InfoWindow({
       content: contentString2
     });
 
-    var contentString3 = '<div id="volunteerContainer">'+
-    '<center><div>PLOT X</div></center>'+
-    '<div id="registerPlot">'+
-      '<form class="inputField" action="index.html" method="submit">'+
-        '<p class="input25">First Name:</p>'+
-        '<input class="input75" type="text" required>'+
-        '<p class="input25">Last Name:</p>'+
-        '<input class="input75" type="text" required>'+
-        '<p class="input25">Email Address:</p>'+
-        '<input class="input75" type="text" required>'+
-        '<p class="input25">Phone Number:</p>'+
-        '<input class="input25" type="text" maxlength="3">'+
-        '<input class="input25" type="text" maxlength="3">'+
-        '<input class="input25" type="text" maxlength="4">'+
-        '<p class="input25">Organizations:</p>'+
-        '<input class="input75" type="text">'+
-      '</form>'+
-      '<center>'+
-        '<button onclick="finishForm()">SUBMIT</button>'+
-      '</center>'+
-      '<div>'+
+    var contentString3 = '<div id="siteNotice">'+
       '</div>'+
-    '</div>'+
-    '</div>';
+      '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+      'sandstone rock formation in the southern part of the '+
+      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+      'south west of the nearest large town, Alice Springs; 450&#160;km '+
+      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+      'Aboriginal people of the area. It has many springs, waterholes, '+
+      'rock caves and ancient paintings. Uluru is listed as a World '+
+      'Heritage Site.</p>'+
+      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+      '(last visited June 22, 2009).</p>'+
+      '</div>';
 
   var infowindow3 = new google.maps.InfoWindow({
     content: contentString3
   });
 
-  var contentString4 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString4 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
+    '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+    'sandstone rock formation in the southern part of the '+
+    'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+    'south west of the nearest large town, Alice Springs; 450&#160;km '+
+    '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+    'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+    'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+    'Aboriginal people of the area. It has many springs, waterholes, '+
+    'rock caves and ancient paintings. Uluru is listed as a World '+
+    'Heritage Site.</p>'+
+    '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+    'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+    '(last visited June 22, 2009).</p>'+
+    '</div>';
 
   var infowindow4 = new google.maps.InfoWindow({
     content: contentString4
   });
 
-  var contentString5 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString5 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
+    '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+    'sandstone rock formation in the southern part of the '+
+    'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+    'south west of the nearest large town, Alice Springs; 450&#160;km '+
+    '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+    'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+    'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+    'Aboriginal people of the area. It has many springs, waterholes, '+
+    'rock caves and ancient paintings. Uluru is listed as a World '+
+    'Heritage Site.</p>'+
+    '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+    'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+    '(last visited June 22, 2009).</p>'+
+    '</div>';
 
   var infowindow5 = new google.maps.InfoWindow({
     content: contentString5
   });
 
-  var contentString6 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString6 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
+    '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+    'sandstone rock formation in the southern part of the '+
+    'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+    'south west of the nearest large town, Alice Springs; 450&#160;km '+
+    '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+    'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+    'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+    'Aboriginal people of the area. It has many springs, waterholes, '+
+    'rock caves and ancient paintings. Uluru is listed as a World '+
+    'Heritage Site.</p>'+
+    '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+    'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+    '(last visited June 22, 2009).</p>'+
+    '</div>';
 
   var infowindow6 = new google.maps.InfoWindow({
     content: contentString6
   });
 
-  var contentString7 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString7 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
+    '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+    'sandstone rock formation in the southern part of the '+
+    'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+    'south west of the nearest large town, Alice Springs; 450&#160;km '+
+    '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+    'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+    'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+    'Aboriginal people of the area. It has many springs, waterholes, '+
+    'rock caves and ancient paintings. Uluru is listed as a World '+
+    'Heritage Site.</p>'+
+    '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+    'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+    '(last visited June 22, 2009).</p>'+
+    '</div>';
 
   var infowindow7 = new google.maps.InfoWindow({
     content: contentString7
   });
 
-  var contentString8 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString8 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
+    '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+    'sandstone rock formation in the southern part of the '+
+    'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+    'south west of the nearest large town, Alice Springs; 450&#160;km '+
+    '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+    'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+    'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+    'Aboriginal people of the area. It has many springs, waterholes, '+
+    'rock caves and ancient paintings. Uluru is listed as a World '+
+    'Heritage Site.</p>'+
+    '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+    'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+    '(last visited June 22, 2009).</p>'+
+    '</div>';
 
   var infowindow8 = new google.maps.InfoWindow({
     content: contentString8
   });
 
-  var contentString9 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString9 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
+    '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+    'sandstone rock formation in the southern part of the '+
+    'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+    'south west of the nearest large town, Alice Springs; 450&#160;km '+
+    '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+    'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+    'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+    'Aboriginal people of the area. It has many springs, waterholes, '+
+    'rock caves and ancient paintings. Uluru is listed as a World '+
+    'Heritage Site.</p>'+
+    '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+    'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+    '(last visited June 22, 2009).</p>'+
+    '</div>';
 
   var infowindow9 = new google.maps.InfoWindow({
     content: contentString9
   });
 
-  var contentString10 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString10 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
+    '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+    'sandstone rock formation in the southern part of the '+
+    'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+    'south west of the nearest large town, Alice Springs; 450&#160;km '+
+    '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+    'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+    'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+    'Aboriginal people of the area. It has many springs, waterholes, '+
+    'rock caves and ancient paintings. Uluru is listed as a World '+
+    'Heritage Site.</p>'+
+    '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+    'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+    '(last visited June 22, 2009).</p>'+
+    '</div>';
 
   var infowindow10 = new google.maps.InfoWindow({
     content: contentString10
