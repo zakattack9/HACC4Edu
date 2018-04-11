@@ -634,7 +634,9 @@ $(document).ready(function() {
     if(document.getElementById('plotPopUp').style.display == "block") {
     $('#plotPopUp').css("display", "none");
     $('#plotContainer').css("filter", "blur(0px)");
-  } else if(document.getElementById('creditsPopUp').style.display == "block") {
+  }
+
+  if(document.getElementById('creditsPopUp').style.display == "block") {
     $('#creditsPopUp').css("display", "none");
   }
 

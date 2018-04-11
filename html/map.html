@@ -5,15 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/map.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="../scripts/app.js" type="text/javascript"></script>
   <title>Adopt-A-Plot</title>
 </head>
 <body>
   <div id="map"></div>
   <div id="coords"></div>
-  <!-- <div id="content">
-    Plot A1
-  </div> -->
+
+  <ul>
+      <h1>DEFENDERS OF THE BAY</h1>
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="forum.html">FORUM</a></li>
+      <li><a class="active" href="html/map.html">MAP</a></li>
+      <li id="creditsButton"><a>CREDITS</a></li>
+  </ul>
+
+  <div id="creditsPopUp">
+      <div class="cardContainer">
+          <aside class="profile-card">
+              <!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+              <header>
+                  <img src="../images/Mark.jpg">
+                  </a>
+                  <h1>MARK DEMESILLO</h1>
+                  <h2>Tall Guy</h2>
+              </header>
+              <div class="profile-bio">
+                  <p>Hello there!</p>
+              </div>
+          </aside>
+          <aside class="profile-card">
+              <!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+              <header>
+                  <img src="../images/Kyle.jpg">
+                  </a>
+                  <h1>KYLE LINGAT</h1>
+                  <h2>JavaScript Deficient</h2>
+              </header>
+              <div class="profile-bio">
+                  <p>Hello there!</p>
+              </div>
+          </aside>
+          <aside class="profile-card">
+              <!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+              <header>
+                  <img src="../images/Zak.jpg">
+                  </a>
+                  <h1>ZAK SAKATA</h1>
+                  <h2>At Track Meet</h2>
+              </header>
+              <div class="profile-bio">
+                  <p>Hello there!</p>
+              </div>
+          </aside>
+          <aside class="profile-card">
+              <!--https://codepen.io/darkosxrc/pen/ZGRQbv-->
+              <header>
+                  <img src="../images/Dylan.jpg">
+                  </a>
+                  <h1>DYLAN TUCKER</h1>
+                  <h2>At Track Meet</h2>
+              </header>
+              <div class="profile-bio">
+                  <p>Hello there!</p>
+              </div>
+          </aside>
+      </div>
+      <a class="boxClose menuClose"></a>
+
+      <div id="plotPopUp">
+        <h1 id="infoHeader"></h1>
+        <div id="infoImage"></div>
+        <div id="infoContainer">
+          <div id="text">
+            <h2 id="ownerText"></h2>
+            <h3 id="amtRegistered"></h3>
+            <div class="progressBar"><progress id="progressVal" value="" max="100"></progress></div>
+            <h3 id="progressPercentage"></h3>
+          </div>
+        </div>
+        <a class="boxClose menuClose"></a>
+      </div>
+  </div>
+
 </body>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYz3keMjg2G8FfsHLGh8ntR7rD0LVl1B8&callback=initMap"></script>
 <script src="../scripts/app.js"></script>
