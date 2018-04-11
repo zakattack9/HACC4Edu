@@ -288,6 +288,7 @@ a {
 	position: absolute;
 	top: 0px;
 	z-index: 1;
+	cursor: pointer;
 }
 
 #popTitle {
@@ -315,11 +316,13 @@ a {
   margin-right: 15px;
 	bottom: 5px;
 	transition: 0.2s;
+	cursor: pointer;
 }
 
 #closeThreadPopInner:hover {
 	transform: rotate(-5deg);
 	transition: 0.2s;
+	cursor: pointer;
 }
 
 #popDesc {
@@ -356,6 +359,9 @@ a {
 #addCommentWrap img {
 	width: 20px;
 	transition: 0.2s;
+}
+#addComment {
+	cursor: pointer;
 }
 
 #addCommentWrap img:hover {
@@ -466,10 +472,12 @@ a {
 	font-weight: bold;
 	padding-left: 20px;
 	padding-top: 15px;
+	cursor: pointer;
 }
 
 .threadTitle:hover {
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 .threadDesc {
