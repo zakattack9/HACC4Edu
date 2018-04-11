@@ -185,19 +185,14 @@ $(document).ready(function() {
 	})
 
 
+	$('#menuIcon').on('click', function() {
+		$('#sideNav')[0].style.width = 300 + "px";
+	})
 
+	$('#closeNav').on('click', function() {
+		$('#sideNav')[0].style.width = 0 + "px";
+	})
 });
 
-let object = {
-	test: {
-		test2: "lskdjf",
-		test3: {
-			4: "hi",
-			987: false
-		}
-	}
-}
-
-console.log(object.test.test3[987])
 
 
