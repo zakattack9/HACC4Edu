@@ -14,10 +14,10 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #2FBF71;
-    float: left;
+    float: right;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     text-align: center;
 }
 
