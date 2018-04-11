@@ -495,7 +495,7 @@ $(document).ready(function() {
     $("#infoHeader").text("WELCOME TO PLOT ALG" + (parseInt(event.target.id) + 1));
     $("#secondaryHeader").text("ALG" + (parseInt(event.target.id) + 1));
     $("#ownerText").text("OWNED BY " + plotData[event.target.id].plotManagement);
-    $("#amtRegistered").text(plotData[event.target.id].totalWorkers);
+    $("#amtRegistered").text(plotData[event.target.id].totalWorkers + ' people registered');
     document.getElementById("progressVal").value = ((remAlg / totAlg) * 100);
     $('#plotPopUp').css("display", "block");
     $('#plotContainer').css("filter", "blur(5px)");
