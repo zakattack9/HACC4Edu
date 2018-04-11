@@ -1,0 +1,23 @@
+{
+  "name": "HACC4Edu",
+  "version": "1.0.0",
+  "description": "HACC4Edu Hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakattack9/HACC4Edu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zakattack9/HACC4Edu/issues"
+  },
+  "homepage": "https://github.com/zakattack9/HACC4Edu#readme",
+  "dependencies": {
+    "aws-sdk": "^2.224.1"
+  }
+}

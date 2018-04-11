@@ -1,5 +1,5 @@
 let inputForms = $(".input75");
-let numberForms = $(".input25")
+let numberForms = $(".input25");
 
 let plotData = [
   {

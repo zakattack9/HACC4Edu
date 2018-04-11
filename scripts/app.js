@@ -1,6 +1,6 @@
 console.log("hello");
 
-var map;
+var map, infoWindow;
 var infoWindow1;
 var infoWindow2;
 var infoWindow3;
@@ -21,12 +21,11 @@ function initMap() {
         zoom: 15.5,
         disableDefaultUI: true,
         mapTypeId : "satellite",
-        gestureHandling : "none"
     });
 
     // Show the lat and lng under the mouse cursor.
     var coordsDiv = document.getElementById('coords');
-    map.controls[google.maps.ControlPosition.TOP_CENTER].push(coordsDiv);
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(coordsDiv);
     map.addListener('mousemove', function(event) {
       coordsDiv.textContent =
           'lat: ' + event.latLng.lat() + ', ' +
@@ -131,10 +130,11 @@ function initMap() {
 
     var a5 = new google.maps.Polygon({
             paths: a5Coords,
-            strokeColor: '#C9F2C7',
+            strokeColor: 'red',
             strokeOpacity: 0.8,
-            strokeWeight: 1,
-            fillOpacity: 0
+            strokeWeight: 5,
+            fillColor: 'red',
+            fillOpacity: 0.35
           });
       a5.setMap(map);
 
@@ -165,10 +165,11 @@ function initMap() {
 
     var a7 = new google.maps.Polygon({
             paths: a7Coords,
-            strokeColor: '#C9F2C7',
+            strokeColor: 'red',
             strokeOpacity: 0.8,
-            strokeWeight: 1,
-            fillOpacity: 0
+            strokeWeight: 5,
+            fillColor: 'red',
+            fillOpacity: 0.35
           });
       a7.setMap(map);
 
@@ -181,10 +182,11 @@ function initMap() {
 
     var a8 = new google.maps.Polygon({
             paths: a8Coords,
-            strokeColor: '#C9F2C7',
+            strokeColor: 'red',
             strokeOpacity: 0.8,
-            strokeWeight: 1,
-            fillOpacity: 0
+            strokeWeight: 5,
+            fillColor: 'red',
+            fillOpacity: 0.35
           });
       a8.setMap(map);
 
@@ -224,277 +226,136 @@ function initMap() {
       map.data.add({geometry: new google.maps.Data.Polygon([a2Coords])});
       map.data.add({geometry: new google.maps.Data.Polygon([a3Coords])});
       map.data.add({geometry: new google.maps.Data.Polygon([a4Coords])});
-      map.data.add({geometry: new google.maps.Data.Polygon([a5Coords])});
+      // map.data.add({geometry: new google.maps.Data.Polygon([a5Coords])});
       map.data.add({geometry: new google.maps.Data.Polygon([a6Coords])});
-      map.data.add({geometry: new google.maps.Data.Polygon([a7Coords])});
-      map.data.add({geometry: new google.maps.Data.Polygon([a8Coords])});
+      // map.data.add({geometry: new google.maps.Data.Polygon([a7Coords])});
+      // map.data.add({geometry: new google.maps.Data.Polygon([a8Coords])});
       map.data.add({geometry: new google.maps.Data.Polygon([a9Coords])});
       map.data.add({geometry: new google.maps.Data.Polygon([a10Coords])});
 
-      var contentString1 = '<div>'+
-      '<embed src="register.html">'+
-      '</div>';
+      var contentString1 = '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Plot A1</h1>'+
+        '<div id="bodyContent">'+
+        '<p><b>Plot A1</b> is currently managed by <b>Tatteus Greene</b>, and is one of the largest plots in the bay. ' +
+        'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
+        '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A1</a> '+
+        '</div>';
 
   var infowindow1 = new google.maps.InfoWindow({
     content: contentString1
   });
 
-  var contentString2 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString2 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
+    '<h1 id="firstHeading" class="firstHeading">Plot A2</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Plot A2</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
+    '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A2</a> '+
+    '</div>';
 
     var infowindow2 = new google.maps.InfoWindow({
       content: contentString2
     });
 
-    var contentString3 = '<div id="volunteerContainer">'+
-    '<center><div>PLOT X</div></center>'+
-    '<div id="registerPlot">'+
-      '<form class="inputField" action="index.html" method="submit">'+
-        '<p class="input25">First Name:</p>'+
-        '<input class="input75" type="text" required>'+
-        '<p class="input25">Last Name:</p>'+
-        '<input class="input75" type="text" required>'+
-        '<p class="input25">Email Address:</p>'+
-        '<input class="input75" type="text" required>'+
-        '<p class="input25">Phone Number:</p>'+
-        '<input class="input25" type="text" maxlength="3">'+
-        '<input class="input25" type="text" maxlength="3">'+
-        '<input class="input25" type="text" maxlength="4">'+
-        '<p class="input25">Organizations:</p>'+
-        '<input class="input75" type="text">'+
-      '</form>'+
-      '<center>'+
-        '<button onclick="finishForm()">SUBMIT</button>'+
-      '</center>'+
-      '<div>'+
+    var contentString3 = '<div id="siteNotice">'+
       '</div>'+
-    '</div>'+
-    '</div>';
+      '<h1 id="firstHeading" class="firstHeading">Plot A3</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Plot A3</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+      'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
+      '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A3</a> '+
+      '</div>';
 
   var infowindow3 = new google.maps.InfoWindow({
     content: contentString3
   });
 
-  var contentString4 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString4 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
-
+    '<h1 id="firstHeading" class="firstHeading">Plot A4</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Plot A4</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
+    '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A4</a> '+
+    '</div>';
   var infowindow4 = new google.maps.InfoWindow({
     content: contentString4
   });
 
-  var contentString5 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString5 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
+    '<h1 id="firstHeading" class="firstHeading">Plot A5</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Plot A5</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
+    '<p>Work Log: <a href="log.html" class="registerLink">Plot A5</a> '+
+    '</div>';
 
-  var infowindow5 = new google.maps.InfoWindow({
-    content: contentString5
-  });
+    var infowindow5 = new google.maps.InfoWindow({
+      content: contentString5
+    });
 
-  var contentString6 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
-    '</div>'+
-  '</div>'+
-  '</div>';
+    var contentString6 = '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Plot A6</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Plot A6</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+      'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
+      '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A6</a> '+
+      '</div>';
 
   var infowindow6 = new google.maps.InfoWindow({
     content: contentString6
   });
 
-  var contentString7 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString7 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
+    '<h1 id="firstHeading" class="firstHeading">Plot A7</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Plot A7</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
+    '<p>Work Log: <a href="log.html" class="registerLink">Plot A7</a> '+
+    '</div>';
 
   var infowindow7 = new google.maps.InfoWindow({
     content: contentString7
   });
 
-  var contentString8 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString8 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
+    '<h1 id="firstHeading" class="firstHeading">Plot A8</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Plot A8</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
+    '<p>Work Log: <a href="log.html" class="registerLink">Plot A8</a> '+
+    '</div>';
 
   var infowindow8 = new google.maps.InfoWindow({
     content: contentString8
   });
 
-  var contentString9 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString9 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
-
+    '<h1 id="firstHeading" class="firstHeading">Plot A9</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Plot A9</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
+    '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A9</a> </p>'+
+    '</div>';
   var infowindow9 = new google.maps.InfoWindow({
     content: contentString9
   });
 
-  var contentString10 = '<div id="volunteerContainer">'+
-  '<center><div>PLOT X</div></center>'+
-  '<div id="registerPlot">'+
-    '<form class="inputField" action="index.html" method="submit">'+
-      '<p class="input25">First Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Last Name:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Email Address:</p>'+
-      '<input class="input75" type="text" required>'+
-      '<p class="input25">Phone Number:</p>'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="3">'+
-      '<input class="input25" type="text" maxlength="4">'+
-      '<p class="input25">Organizations:</p>'+
-      '<input class="input75" type="text">'+
-    '</form>'+
-    '<center>'+
-      '<button onclick="finishForm()">SUBMIT</button>'+
-    '</center>'+
-    '<div>'+
+  var contentString10 = '<div id="siteNotice">'+
     '</div>'+
-  '</div>'+
-  '</div>';
+    '<h1 id="firstHeading" class="firstHeading">Plot A10</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>Plot A10</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
+    'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
+    '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A10</a> '+
+    '</div>';
 
   var infowindow10 = new google.maps.InfoWindow({
     content: contentString10
@@ -599,35 +460,56 @@ function initMap() {
    marker10.addListener('click', function() {
      infowindow10.open(map, marker10);
    });
+   map.data.addListener('mouseover', function(event) {
+     map.data.revertStyle();
+     map.data.overrideStyle(event.feature, {strokeWeight: 8});
+   });
 
+   map.data.addListener('mouseout', function(event) {
+     map.data.revertStyle();
+   });
 
-      // console.log(map.data.b.b[4]);
-      // var plot1 = map.data.b.b[4];
-      // // When the user clicks, set 'isColorful', changing the color of the letters.
-      // // When the user hovers, tempt them to click by outlining the letters.
-      // // Call revertStyle() to remove all overrides. This will use the style rules
-      // // defined in the function passed to setStyle()
-      map.data.addListener('mouseover', function(event) {
-        map.data.revertStyle();
-        map.data.overrideStyle(event.feature, {strokeWeight: 8});
-      });
+   map.data.setStyle(function(feature) {
+     var color = '#C9F2C7';
+     if (feature.getProperty('isColorful')) {
+       color = feature.getProperty('color');
+     }
+     return /** @type {google.maps.Data.StyleOptions} */({
+       strokeColor: color,
+       strokeWeight: 1,
+       strokeOpacity: 0.98,
+     });
+   });
 
-      map.data.addListener('mouseout', function(event) {
-        map.data.revertStyle();
-      });
+   infoWindow = new google.maps.InfoWindow;
 
-      map.data.setStyle(function(feature) {
-        var color = '#C9F2C7';
-        if (feature.getProperty('isColorful')) {
-          color = feature.getProperty('color');
-        }
-        return /** @type {google.maps.Data.StyleOptions} */({
-          strokeColor: color,
-          strokeWeight: 1,
-          strokeOpacity: 0.98,
-        });
-      });
-};
+   // Try HTML5 geolocation.
+   if (navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(function(position) {
+       var pos = {
+         lat: position.coords.latitude,
+         lng: position.coords.longitude
+       };
+
+       infoWindow.setPosition(pos);
+       infoWindow.setContent('Location found.');
+       infoWindow.open(map);
+     }, function() {
+       handleLocationError(true, infoWindow, map.getCenter());
+     });
+   } else {
+     // Browser doesn't support Geolocation
+     handleLocationError(false, infoWindow, map.getCenter());
+   }
+ }
+
+ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+   infoWindow.setPosition(pos);
+   infoWindow.setContent(browserHasGeolocation ?
+                         'Error: The Geolocation service failed.' :
+                         'Error: Your browser doesn\'t support geolocation.');
+   infoWindow.open(map);
+ }
 
 $(document).ready(function() {
   var gAlg = 0;
@@ -642,20 +524,42 @@ $(document).ready(function() {
   $("#progressTot")[0].value = valueBar
 
 
-  $('.plot').click(function() {
-    let algR = plotData[event.target.id].removedAlgae;
-    var remAlg = parseInt(algR.slice(0, 4))
-    let algT = plotData[event.target.id].totalAlgae;
-    var totAlg = parseInt(algT.slice(0, 4))
-    // document.getElementById('infoImage').src = event.target.src;
-    $("#infoHeader").text("WELCOME TO PLOT ALG" + (parseInt(event.target.id) + 1));
-    $("#ownerText").text("THIS PLOT IS OWNED BY " + plotData[event.target.id].plotManagement);
-    $("#amtRegistered").text(plotData[event.target.id].totalWorkers + ' people are currently registered');
-    document.getElementById("progressVal").value = ((remAlg / totAlg) * 100);
-    $('#progressPercentage').text('This plot is ' + Math.round(document.getElementById("progressVal").value) + '% complete!')
+  // $('.plotItem').click(function() {
+  //   let algR = plotData[event.target.id].removedAlgae;
+  //   var remAlg = parseInt(algR.slice(0, 4))
+  //   let algT = plotData[event.target.id].totalAlgae;
+  //   var totAlg = parseInt(algT.slice(0, 4))
+  //   console.log(event.target.src)
+  //   document.getElementById('infoImage').src = event.target.src;
+  //   $("#infoHeader").text("WELCOME TO PLOT ALG" + (parseInt(event.target.id) + 1));
+  //   $("#ownerText").text("THIS PLOT IS OWNED BY " + plotData[event.target.id].plotManagement);
+  //   $("#amtRegistered").text(plotData[event.target.id].totalWorkers + ' people are currently registered');
+  //   document.getElementById("progressVal").value = ((remAlg / totAlg) * 100);
+  //   $('#progressPercentage').text('This plot is ' + Math.round(document.getElementById("progressVal").value) + '% complete!')
+  //   $('#plotPopUp').css("display", "block");
+  //   $('#plotContainer').css("filter", "blur(5px)");
+  // });
+
+  $('.plotItem').click(function() {
+    console.log(this);
     $('#plotPopUp').css("display", "block");
-    $('#plotContainer').css("filter", "blur(5px)");
+    $('#plotPopTitle')[0].innerHTML = $(this).find('.plotText').find('.plotTitle')[0].innerText + " Info:";
+
+    let getNumber = $(this).find('.plotText').find('.plotTitle')[0].innerText.slice(-1);
+    $.getScript('./scripts/register.js', function() {
+        let barPercentage = (+plotData[getNumber].removedAlgae.substring(0, 4) / +plotData[getNumber].totalAlgae.substring(0, 4)) * 100;
+        console.log(barPercentage * 100)
+
+        $('#plotManager')[0].innerHTML = plotData[getNumber].plotManagement;
+        $('#totalWorkers')[0].innerHTML = plotData[getNumber].totalWorkers;
+        $('#innerData')[0].style.width = barPercentage + "%";
+        $('#cleanRatio')[0].innerHTML = plotData[getNumber].removedAlgae + " / " + plotData[getNumber].totalAlgae + " of Algae Cleaned";
+    });
   });
+
+  $('#closePop').on('click', function() {
+    $('#plotPopUp').css("display", "none");
+  })
 
   $('#creditsButton').click(function() {
     $('#creditsPopUp').css("display", "block");
@@ -663,11 +567,21 @@ $(document).ready(function() {
 
   $('.menuClose').click(function() {
     if(document.getElementById('plotPopUp').style.display == "block") {
-    $('#plotPopUp').css("display", "none");
-    $('#plotContainer').css("filter", "blur(0px)");
-  } else if(document.getElementById('creditsPopUp').style.display == "block") {
-    $('#creditsPopUp').css("display", "none");
-  }
+      $('#plotPopUp').css("display", "none");
+      $('#plotContainer').css("filter", "blur(0px)");
+    }
+
+    if(document.getElementById('creditsPopUp').style.display == "block") {
+      $('#creditsPopUp').css("display", "none");
+    }
 
   });
+
+  $('#overlayOpen').on('click', function() {
+    $('#sideNav')[0].style.width = "300px";
+  })
+
+  $('#closeNav').on('click', function() {
+    $('#sideNav')[0].style.width = "0";
+  })
 });
