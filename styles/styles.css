@@ -206,6 +206,7 @@ li a:hover {
   width: 70%;
   height: 100%;
   background-color: #2A324B;
+  position: relative;
 }
 
 #overlayOpen {
@@ -316,23 +317,71 @@ h4:after{
 } */
 
 #plotPopUp {
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: calc(100% - 70px);
   position: absolute; /*it can be fixed too*/
-  left:0; right:200px;
-  top:0; bottom:0;
-  margin: auto;
+  left: 0;
+  top: 70px;
+  z-index: 2;
   display: none;
-  background-color: RGBA(201,242,199, 0.95);
-  -moz-box-shadow: 0 1px 5px #333;
-  -webkit-box-shadow: 0 1px 5px #333;
-  max-height: 100%;
-  overflow-y: scroll;
 }
 
-#plotPopUp img {
-  height: 80%;
+#plotPopUp:after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.3;
+  z-index: -1;
+  filter: blur(1px);
 }
+
+#plotPopBox {
+  width: 50%;
+  height: 400px;
+  background-color: #C9F2C7;
+  opacity: 1;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  top: 100px;
+  border-radius: 10px;
+}
+
+#closePop {
+  width: 30px;
+  font-size: 35px;
+  display: block;
+  margin-right: 5px;
+  margin-left: auto;
+  transition: 0.2s;
+}
+
+#closePop:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+#plotPopTitle {
+  font-size: 19px;
+  padding-left: 30px;
+  font-weight: bold;
+}
+
+#managerWrap {
+  padding-left: 30px;
+}
+
+#workersWrap {
+  padding-left: 30px;
+}
+
+/*#plotPopUp img {
+  height: 80%;
+}*/
 
 /*styles for plot div*/
 #plotWrap {

@@ -498,21 +498,39 @@ $(document).ready(function() {
   // }
 
 
+  // $('.plotItem').click(function() {
+  //   let algR = plotData[event.target.id].removedAlgae;
+  //   var remAlg = parseInt(algR.slice(0, 4))
+  //   let algT = plotData[event.target.id].totalAlgae;
+  //   var totAlg = parseInt(algT.slice(0, 4))
+  //   console.log(event.target.src)
+  //   document.getElementById('infoImage').src = event.target.src;
+  //   $("#infoHeader").text("WELCOME TO PLOT ALG" + (parseInt(event.target.id) + 1));
+  //   $("#ownerText").text("THIS PLOT IS OWNED BY " + plotData[event.target.id].plotManagement);
+  //   $("#amtRegistered").text(plotData[event.target.id].totalWorkers + ' people are currently registered');
+  //   document.getElementById("progressVal").value = ((remAlg / totAlg) * 100);
+  //   $('#progressPercentage').text('This plot is ' + Math.round(document.getElementById("progressVal").value) + '% complete!')
+  //   $('#plotPopUp').css("display", "block");
+  //   $('#plotContainer').css("filter", "blur(5px)");
+  // });
+
   $('.plotItem').click(function() {
-    let algR = plotData[event.target.id].removedAlgae;
-    var remAlg = parseInt(algR.slice(0, 4))
-    let algT = plotData[event.target.id].totalAlgae;
-    var totAlg = parseInt(algT.slice(0, 4))
-    console.log(event.target.src)
-    document.getElementById('infoImage').src = event.target.src;
-    $("#infoHeader").text("WELCOME TO PLOT ALG" + (parseInt(event.target.id) + 1));
-    $("#ownerText").text("THIS PLOT IS OWNED BY " + plotData[event.target.id].plotManagement);
-    $("#amtRegistered").text(plotData[event.target.id].totalWorkers + ' people are currently registered');
-    document.getElementById("progressVal").value = ((remAlg / totAlg) * 100);
-    $('#progressPercentage').text('This plot is ' + Math.round(document.getElementById("progressVal").value) + '% complete!')
+    console.log(this);
     $('#plotPopUp').css("display", "block");
-    $('#plotContainer').css("filter", "blur(5px)");
+    $('#plotPopTitle')[0].innerHTML = $(this).find('.plotText').find('.plotTitle')[0].innerText + " Info:";
+
+    $.getScript('./scripts/register.js', function() {
+        randomPlotGrab();
+        console.log();
+
+        $('#plotManager')[0].innerHTML = randomPlotGrab().plotManagement;
+        $('#totalWorkers')[0].innerHTML = randomPlotGrab().totalWorkers;
+    });
   });
+
+  $('#closePop').on('click', function() {
+    $('#plotPopUp').css("display", "none");
+  })
 
   $('#creditsButton').click(function() {
     $('#creditsPopUp').css("display", "block");

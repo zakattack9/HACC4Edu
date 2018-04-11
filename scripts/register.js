@@ -1,5 +1,5 @@
 let inputForms = $(".input75");
-let numberForms = $(".input25")
+let numberForms = $(".input25");
 
 let plotData = [
   {
@@ -65,6 +65,9 @@ let plotData = [
 ]
 
 let randomPlot = Math.floor(Math.random() * plotData.length)
+function randomPlotGrab () {
+  return plotData[randomPlot];
+}
 
 // let data = $(".relevantStat");
 //

@@ -19,7 +19,7 @@
 			<div class="navItem" style="margin-top: 70px; background-color: white;">HOME</div>
 			<a href="./html/forum.html"><div class="navItem">FORUM</div></a>
 			<a href="./html/map.html"><div class="navItem">MAP</div></a>
-			<a href="./html/register.html"><div class="navItem">REGISTER</div></a>
+			<!-- <a href="./html/register.html"><div class="navItem">REGISTER</div></a> -->
 			<div class="navItem" id="creditsButton">CREDITS</div>
 		</div>
 
@@ -56,55 +56,55 @@
 				<div id="plotContainer">
 					<div class="plotItem" style="background-image: url('../images/bay1.png')">
 						<div class="plotText">
-							<div class="plotTitle">PLOT 1</div>
+							<div class="plotTitle">Plot 1</div>
 						</div>
 					</div>
 
 					<div class="plotItem" style="background-image: url('../images/bay2.png')">
 						<div class="plotText">
-							<div class="plotTitle">PLOT 2</div>
+							<div class="plotTitle">Plot 2</div>
 						</div>
 					</div>
 
 					<div class="plotItem" style="background-image: url('../images/bay3.png')">
 						<div class="plotText">
-							<div class="plotTitle">PLOT 3</div>
+							<div class="plotTitle">Plot 3</div>
 						</div>
 					</div>
 
 					<div class="plotItem" style="background-image: url('../images/bay4.png')">
 						<div class="plotText">
-							<div class="plotTitle">PLOT 4</div>
+							<div class="plotTitle">Plot 4</div>
 						</div>
 					</div>
 
 					<div class="plotItem" style="background-image: url('../images/bay5.png')">
 						<div class="plotText">
-							<div class="plotTitle">PLOT 5</div>
+							<div class="plotTitle">Plot 5</div>
 						</div>
 					</div>
 
 					<div class="plotItem" style="background-image: url('../images/bay6.png')">
 						<div class="plotText">
-							<div class="plotTitle">PLOT 6</div>
+							<div class="plotTitle">Plot 6</div>
 						</div>
 					</div>
 
 					<div class="plotItem" style="background-image: url('../images/bay7.png')">
 						<div class="plotText">
-							<div class="plotTitle">PLOT 7</div>
+							<div class="plotTitle">Plot 7</div>
 						</div>
 					</div>
 
 					<div class="plotItem" style="background-image: url('../images/bay8.png')">
 						<div class="plotText">
-							<div class="plotTitle">PLOT 8</div>
+							<div class="plotTitle">Plot 8</div>
 						</div>
 					</div>
 
 					<div class="plotItem" style="background-image: url('../images/bay9.png')">
 						<div class="plotText">
-							<div class="plotTitle">PLOT 9</div>
+							<div class="plotTitle">Plot 9</div>
 						</div>
 					</div>
 
@@ -151,20 +151,27 @@
 							</div> -->
 				</div>
 			</div>
-		</div>
 
-		<div id="plotPopUp">
-			<h1 id="infoHeader"></h1>
-			<div id="infoImage"></div>
-			<div id="infoContainer">
-				<div id="text">
-					<h2 id="ownerText"></h2>
-					<h3 id="amtRegistered"></h3>
-					<div class="progressBar"><progress id="progressVal" value="" max="100"></progress></div>
-					<h3 id="progressPercentage"></h3>
+			<div id="plotPopUp">
+				<div id="plotPopBox">
+					<div id="closePop">&times;</div>
+
+					<div id="plotPopTitle"></div>
+
+					<br>
+					<div id="managerWrap">
+						Current Plot Manager:
+						<div id="plotManager" style="font-style: italic;"></div>
+					</div>
+					
+					<br>
+					<div id="workersWrap">
+						Total Workers:
+						<div id="totalWorkers" style="font-style: italic;"></div>
+					</div>
+
 				</div>
 			</div>
-			<a class="boxClose menuClose"></a>
 		</div>
 
 		<div id="creditsPopUp">
