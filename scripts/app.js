@@ -512,13 +512,16 @@ function initMap() {
  }
 
 $(document).ready(function() {
-  // var gAlg = 0;
-  // var rAlg = 0;
-  // for (var i = 0; i < plotData.length; i++) {
-  //   totalAlg = gAlg += parseInt(plotData[i].totalAlgae.slice(0, 4));
-  //   totalRemoved = rAlg += parseInt(plotData[i].removedAlgae.slice(0, 4));
-  //   valueBar = ((rAlg / gAlg) * 100);
-  // }
+  var gAlg = 0;
+  var rAlg = 0;
+  for (var i = 0; i < plotData.length; i++) {
+    totalAlg = gAlg += parseInt(plotData[i].totalAlgae.slice(0, 4));
+    totalRemoved = rAlg += parseInt(plotData[i].removedAlgae.slice(0, 4));
+    valueBar = ((rAlg / gAlg) * 100);
+  }
+  $("#statContainer h3")[0].innerText = "" + rAlg + "kgs out of " + gAlg + "kgs of algie have been removed!";
+  $("#statContainer h3")[3].innerText = plotData.length + " plots in total have been launched and volunteered for!";
+  $("#progressTot")[0].value = valueBar
 
 
   // $('.plotItem').click(function() {
