@@ -487,6 +487,15 @@ function initMap() {
 };
 
 $(document).ready(function() {
+  var gAlg = 0;
+  var rAlg = 0;
+  for (var i = 0; i < plotData.length; i++) {
+    totalAlg = gAlg += parseInt(plotData[i].totalAlgae.slice(0, 4));
+    totalRemoved = rAlg += parseInt(plotData[i].removedAlgae.slice(0, 4));
+    valueBar = ((rAlg / gAlg) * 100);
+  }
+  
+
   $('.plot').click(function() {
     let algR = plotData[event.target.id].removedAlgae;
     var remAlg = parseInt(algR.slice(0, 4))
