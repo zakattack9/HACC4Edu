@@ -64,7 +64,7 @@ li a:hover {
 	line-height: 70px;
 	padding-left: 40px;
 	font-weight: bold;
-	color: #2A324B;
+	color: #0B3541;
 	letter-spacing: 5px;
 	user-select: none;
 }
@@ -886,7 +886,7 @@ a.boxClose:hover {
 
 #creditsPopUp {
   width: 30%;
-  height: 100%;
+  height: 85%;
   position: absolute; /*it can be fixed too*/
   left:0; right: 0;
   top:0; bottom:0;

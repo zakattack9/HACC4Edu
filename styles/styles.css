@@ -187,6 +187,7 @@ li a:hover {
   width: 30%;
 }
 
+
 #rightBar h1, #midContainer h1 {
   text-align: center;
   color: white;
@@ -197,6 +198,7 @@ li a:hover {
   height: 70px;
   line-height: 70px;
   background-color: #E7F1B8;
+  color: #0B3541;
   margin-top: 0;
   letter-spacing: 10px;
 }
@@ -508,7 +510,7 @@ progress[value]::-webkit-progress-bar {
 
 #creditsPopUp {
   width: 30%;
-  height: 100%;
+  height: 85%;
   position: absolute; /*it can be fixed too*/
   left:0;
   top:0; bottom:0;
