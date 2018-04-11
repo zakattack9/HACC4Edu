@@ -89,7 +89,7 @@ li a:hover {
   top:0; bottom:0;
   margin: auto;
   display: none;
-  background-color: RGBA(201,242,199, 0.95);
+  background-color: RGBA(201,242,199, 0.5);
   border:2px solid #ccc;
   -moz-box-shadow: 0 1px 5px #333;
   -webkit-box-shadow: 0 1px 5px #333;
@@ -118,6 +118,7 @@ aside {
   box-shadow: 0 0 100px 10px #fff;
   transition: all ease 0.3s;
   cursor: pointer;
+  margin-bottom: 10%;
 }
 
 aside:hover {
