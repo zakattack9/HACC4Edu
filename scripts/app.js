@@ -237,7 +237,6 @@ function initMap() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Plot A1</h1>'+
         '<div id="bodyContent">'+
-        '<p><b>Plot A1</b> is currently managed by <b>Tatteus Greene</b>, and is one of the largest plots in the bay. ' +
         'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
         '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A1</a> '+
         '</div>';
@@ -250,7 +249,6 @@ function initMap() {
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Plot A2</h1>'+
     '<div id="bodyContent">'+
-    '<p><b>Plot A2</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
     '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A2</a> '+
     '</div>';
@@ -263,7 +261,6 @@ function initMap() {
       '</div>'+
       '<h1 id="firstHeading" class="firstHeading">Plot A3</h1>'+
       '<div id="bodyContent">'+
-      '<p><b>Plot A3</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
       'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
       '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A3</a> '+
       '</div>';
@@ -276,7 +273,6 @@ function initMap() {
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Plot A4</h1>'+
     '<div id="bodyContent">'+
-    '<p><b>Plot A4</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
     '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A4</a> '+
     '</div>';
@@ -301,7 +297,6 @@ function initMap() {
       '</div>'+
       '<h1 id="firstHeading" class="firstHeading">Plot A6</h1>'+
       '<div id="bodyContent">'+
-      '<p><b>Plot A6</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
       'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
       '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A6</a> '+
       '</div>';
@@ -340,7 +335,6 @@ function initMap() {
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Plot A9</h1>'+
     '<div id="bodyContent">'+
-    '<p><b>Plot A9</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
     '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A9</a> </p>'+
     '</div>';
@@ -352,7 +346,6 @@ function initMap() {
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Plot A10</h1>'+
     '<div id="bodyContent">'+
-    '<p><b>Plot A10</b> is currently managed by <b>Nyler Tichols</b>, and is one of the largest plots in the bay. ' +
     'The plot is about 33% clean right now because of the efforts of the manager and numerous volunteers. </p>'+
     '<p>REGISTER HERE: <a href="register.html" class="registerLink">Plot A10</a> '+
     '</div>';
