@@ -81,6 +81,7 @@ $(document).ready(function() {
 	$('.threadTitle').on('click', function() {
 		$('#threadPop')[0].style.display = "block";
 		$('#container')[0].style.overflowY = "hidden";
+		$('#threadWrap').scrollTop(0);
 
 		let threadDesc = $(this.parentElement).find('.threadDesc')[0].innerText;
 		$('#popDesc')[0].innerHTML = threadDesc;
@@ -92,5 +93,56 @@ $(document).ready(function() {
 		$('#container')[0].style.overflowY = "auto";
 	})
 
+	$('#addComment').on('click', function() {
+
+		if($('#addCommentWrap').hasClass('addingComment')) {
+			$('#addCommentWrap').removeClass('addingComment');
+
+			$('#addCommentWrap img')[0].style.transform = "rotate(0deg)";
+
+			$('#commentsWrap').find(':first-child').remove();
+			$('#commentsWrap').find(':first-child').remove(); //second one removes "add comment" button
+			$('#commentsWrap').find(':first-child').remove(); //third one to remove the <hr>
+
+		}else {
+			$('#addCommentWrap').addClass('addingComment');
+
+			$('#addCommentWrap img')[0].style.transform = "rotate(-45deg)";
+
+			$('#commentsWrap').prepend(`
+				<textarea></textarea>
+				<div id="addCommentBtn">Add Comment</div>
+				<hr>
+			`)		
+			
+			$('#addCommentBtn').on('click', function() {
+				if ($('#commentsWrap textarea').length > 0) {
+					let newComment = $('#commentsWrap textarea').val();
+					$('#commentsWrap').find(':first-child').remove();
+					$('#commentsWrap').find(':first-child').remove();
+
+					$('#commentsWrap').prepend(`
+						<div class="comments" style="">${newComment}</div>
+						<div class="comBtmInf">
+							1 second ago
+						</div>
+					`)
+
+					$('#addCommentWrap').removeClass('addingComment');
+					$('#addCommentWrap img')[0].style.transform = "rotate(0deg)";
+				} else {
+					$('#commentsWrap textarea').attr("placeholder", "Field is blank, please input your comment in this field")
+				}
+
+			})
+		}
+
+	})
+
+
 
 });
+
+
+
+
