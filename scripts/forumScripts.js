@@ -1,42 +1,46 @@
 $(document).ready(function() {
-	$('.threadDesc').map((currVal, index) => {
-		if (index.scrollHeight > index.offsetHeight) {
-			let parentEl = index.parentElement.parentElement;
-			$(parentEl).find('.bottomOpt').append(`
-				<span class="showMore">
- 					Show More
- 				</span>
-			`)
-		}
-	});
-	
-	$('.showMore').on('click', function() {
-		let parentEl = this.parentElement.parentElement;
-		let descEl = $(parentEl).find('.threadInfo').find('.threadDesc')[0];
+	function showMoreFunc () {
+		$('.threadDesc').map((currVal, index) => {
+			if (index.scrollHeight > index.offsetHeight) {
+				let parentEl = index.parentElement.parentElement;
+				$(parentEl).find('.bottomOpt').find('.showMore').remove();
+				$(parentEl).find('.bottomOpt').append(`
+					<span class="showMore">
+	 					Show More
+	 				</span>
+				`)
+			}
+		});
 		
-		let bottomOptEl = $(parentEl).find('.bottomOpt')[0];
-		let showMoreTxt = $(bottomOptEl).find('.showMore')[0];
+		$('.showMore').on('click', function() {
+			let parentEl = this.parentElement.parentElement;
+			let descEl = $(parentEl).find('.threadInfo').find('.threadDesc')[0];
+			
+			let bottomOptEl = $(parentEl).find('.bottomOpt')[0];
+			let showMoreTxt = $(bottomOptEl).find('.showMore')[0];
 
-		let heightDiff = descEl.scrollHeight - descEl.offsetHeight;
-		let threadHeight = $(parentEl).height();
-		$(parentEl)[0].style.height = threadHeight + heightDiff + "px";
-		$(descEl)[0].style.height = threadHeight + heightDiff + "px";
-		$(bottomOptEl)[0].style.top = heightDiff + "px";
+			let heightDiff = descEl.scrollHeight - descEl.offsetHeight;
+			let threadHeight = $(parentEl).height();
+			$(parentEl)[0].style.height = threadHeight + heightDiff + "px";
+			$(descEl)[0].style.height = threadHeight + heightDiff + "px";
+			$(bottomOptEl)[0].style.top = heightDiff + "px";
 
-		if(showMoreTxt.innerText === "Show Less") {
-			console.log($(parentEl)[0])
-			$(parentEl)[0].style.height = "140px";
-			$(descEl)[0].style.height = "70px";
-			showMoreTxt.innerHTML = "Show More";
-		}else {
-			showMoreTxt.innerHTML = "Show Less";
-		}
+			if(showMoreTxt.innerText === "Show Less") {
+				console.log($(parentEl)[0])
+				$(parentEl)[0].style.height = "140px";
+				$(descEl)[0].style.height = "70px";
+				showMoreTxt.innerHTML = "Show More";
+			}else {
+				showMoreTxt.innerHTML = "Show Less";
+			}
 
-	})
+		})
+	}
+	showMoreFunc();
 
 	let votedUp = false;
 	let votedDown = false;
-	$('.upArrow').on('click', function() {
+	$(document).on('click', '.upArrow', function() {
 		let parentEl = this.parentElement;
 		let currentCount = $(parentEl).find('.threadCount')[0];
 
@@ -51,7 +55,7 @@ $(document).ready(function() {
 		}
 	})
 
-	$('.downArrow').on('click', function() {
+	$(document).on('click', '.downArrow', function() {
 		let parentEl = this.parentElement;
 		let currentCount = $(parentEl).find('.threadCount')[0];
 
@@ -66,7 +70,7 @@ $(document).ready(function() {
 		}
 	})
 
-	$('#addIcon').on('click', function() {
+	$(document).on('click', '#addIcon', function() {
 		$('#addIcon').toggleClass('exitPop');
 
 		if($('#addIcon').hasClass('exitPop')){
@@ -78,10 +82,10 @@ $(document).ready(function() {
 		}
 	})
 
-	$('.threadTitle').on('click', function() {
+	$(document).on('click', '.threadTitle', function() {
 		$('#threadPop')[0].style.display = "block";
 		$('#container')[0].style.overflowY = "hidden";
-		$('#threadWrap').scrollTop(0);
+		$('#threadWrapPop').scrollTop(0);
 
 		let threadDesc = $(this.parentElement).find('.threadDesc')[0].innerText;
 		$('#popDesc')[0].innerHTML = threadDesc;
@@ -133,16 +137,67 @@ $(document).ready(function() {
 				} else {
 					$('#commentsWrap textarea').attr("placeholder", "Field is blank, please input your comment in this field")
 				}
-
 			})
 		}
 
+	})
+
+	$('#createThread').on('click', function() {
+		let threadTitle = $('#formTitle input').val();
+		let threadDesc = $('#formDescription textarea').val();
+		let threadTags = $('#formTags input').val();
+
+		$('#threadWrap').prepend(`
+			<div class="thread">
+	 			<div class="threadInfo">
+		 			<div class="threadTitle">
+						${threadTitle}
+		 			</div>
+
+		 			<div class="threadDesc">
+		 				${threadDesc}
+		 			</div>
+				</div>
+
+	 			<div class="vote">
+	 				<img class="upArrow" src="../images/arrow.png">
+	 				<div class="threadCount">1</div>
+	 				<img class="downArrow" src="../images/arrow.png">
+	 			</div>
+
+	 			<div class="bottomOpt">
+	 				<span class="dateCreated">
+	 					1 second ago
+	 				</span>
+	 			</div>
+	 		</div>
+		`)
+
+		$('#addIcon').toggleClass('exitPop');
+		$('#addThreadPop')[0].style.display = "none";
+		$('#addIcon')[0].style.transform = "rotate(0deg)";
+
+		//empty inputs
+		$('#formTitle input').val('');
+		$('#formDescription textarea').val('');
+		$('#formTags input').val('');
+		showMoreFunc();
 	})
 
 
 
 });
 
+let object = {
+	test: {
+		test2: "lskdjf",
+		test3: {
+			4: "hi",
+			987: false
+		}
+	}
+}
 
+console.log(object.test.test3[987])
 
 
