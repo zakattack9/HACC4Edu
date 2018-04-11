@@ -23,8 +23,17 @@ $(document).ready(function() {
   });
 
   $("#alg1").click(function() {
-    console.log('alg1 clicked')
-    $("#plotPopUp").find("#infoHeader").text('WELCOME TO PLOT ALG1')
+    $("#plotPopUp").find("#infoHeader").text('WELCOME TO PLOT ALG1');
+    $("#plotPopUp").find("#secondaryHeader").text('ALG1');
+    $("#plotPopUp").find("#ownerText").text('OWNED BY NYLER TICHOLS');
+    $("#plotPopUp").find("#amtRegistered").text('62 PEOPLE ARE CURRENTLY REGISTERED');
+  });
+
+  $("#alg2").click(function() {
+    $("#plotPopUp").find("#infoHeader").text('WELCOME TO PLOT ALG2');
+    $("#plotPopUp").find("#secondaryHeader").text('ALG2');
+    $("#plotPopUp").find("#ownerText").text('OWNED BY TYLAN DUCKER');
+    $("#plotPopUp").find("#amtRegistered").text('23 PEOPLE ARE CURRENTLY REGISTERED');
   });
 
   $('#creditsButton').click(function() {
