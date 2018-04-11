@@ -550,6 +550,7 @@ $(document).ready(function() {
         $('#plotManager')[0].innerHTML = plotData[getNumber].plotManagement;
         $('#totalWorkers')[0].innerHTML = plotData[getNumber].totalWorkers;
         $('#innerData')[0].style.width = barPercentage + "%";
+        $('#cleanRatio')[0].innerHTML = plotData[getNumber].removedAlgae + " / " + plotData[getNumber].totalAlgae + " of Algae Cleaned";
     });
   });
 
