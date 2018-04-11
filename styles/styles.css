@@ -197,6 +197,11 @@ position: relative;
 .imgContainer:hover {
   animation: pulse infinite 1.5s;
 }
+
+#infoHeader {
+  border-bottom: 1px solid black;
+}
+
 h4{
     background: #2FBF71;
     color: white;
@@ -256,7 +261,8 @@ progress[value] {
 }
 
 .progressBar {
-
+  display: table;
+  margin: 0 auto;
 }
 
 progress[value]::-webkit-progress-bar {
