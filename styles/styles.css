@@ -14,6 +14,10 @@ body, html {
   height: 100%;
 }
 
+h1 {
+  font-family: 'Raleway';
+}
+
 #container {
   width: 100%;
   height: 100%;
@@ -32,59 +36,69 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #C9F2C7;
     float: left;
 }
 
 li a {
     display: block;
-    color: white;
+    color: #2A324B;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: 'Raleway';
+    letter-spacing: 3px;
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: white;
 }
 
 #rightBar {
   height: 100%;
   float: left;
-  background-color: red;
+  background-color: #2FBF71;
   width: 30%;
 }
 
-#rightBar h1 {
+#rightBar h1, #midContainer {
   text-align: center;
+  color: white;
+  letter-spacing: 3px;
 }
 
 #midContainer {
   float: left;
   width: 50%;
   height: 100%;
-  background-color: green;
+  background-color: #2A324B;
+}
+
+#plotContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 100px;
+  color: black;
+  margin: auto;
 }
 
 .plot {
   width: 200px;
   height: 200px;
   background-color: white;
-  margin-left: 2px;
 }
 
 #plotPopUp {
-  width: 300px;
-  height: 300px;
+  width: 35%;
+  height: 45%;
   position: fixed; /*it can be fixed too*/
   left:0; right:0;
   top:0; bottom:0;
   margin: auto;
   display: none;
   background-color: yellow;
+  justify-content: center;
 }
 
 a.boxClose{
