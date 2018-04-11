@@ -187,6 +187,7 @@ li a:hover {
   width: 30%;
 }
 
+
 #rightBar h1, #midContainer h1 {
   text-align: center;
   color: white;
@@ -197,6 +198,7 @@ li a:hover {
   height: 70px;
   line-height: 70px;
   background-color: #E7F1B8;
+  color: #0B3541;
   margin-top: 0;
   letter-spacing: 10px;
 }
