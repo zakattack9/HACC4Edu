@@ -1,12 +1,12 @@
 #volunteerContainer, #submitInfo {
   border-radius: 10px;
   box-sizing: border-box;
-  height: 75%;
+  height: 650px;
   width: 40%;
   padding: 20px;
   background-color: #04776C;
   margin-left: 30%;
-  margin-top: 4%;
+  margin-top: 100px;
 }
 
 body, html {
@@ -415,6 +415,20 @@ a.boxClose:hover {
 	z-index: 9999;
 }
 
+#closeNav {
+	font-size: 40px;
+	margin-left: 20px;
+	transition: 0.2s;
+}
+
+#closeNav:hover #closeNavInner {
+	cursor: pointer;
+	display: block;
+	width: 50px;
+	transform: scale(1.05);
+	transition: 0.2s;
+}
+
 #menuIcon {
   width: 25px;
 	display: block;
@@ -432,7 +446,7 @@ a.boxClose:hover {
 
 #sideNav {
 	position: fixed;
-	top: 0;
+	top: -10px;
 	right: 0;
 	height: calc(100% - 70px);
 	width: 0px;
@@ -454,6 +468,11 @@ a.boxClose:hover {
 	width: 50px;
 	transform: scale(1.05);
 	transition: 0.2s;
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }
 
 .navItem {
@@ -486,4 +505,8 @@ a.boxClose:hover {
 	user-select: none;
   position: absolute;
   top: 0;
+}
+
+h2{
+  margin-top: -10px;
 }
